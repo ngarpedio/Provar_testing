@@ -1,0 +1,6 @@
+2023/05/25-17:01:50.723 9407 Creating DB /Users/NicholasGioachini/Desktop/ARPEDIO/Provar_testing/.chromeProfiles/profile3/Default/IndexedDB/https_arpediocom.sfdctest.lightning.force.com_0.indexeddb.leveldb since it was missing.
+2023/05/25-17:01:50.766 9407 Reusing MANIFEST /Users/NicholasGioachini/Desktop/ARPEDIO/Provar_testing/.chromeProfiles/profile3/Default/IndexedDB/https_arpediocom.sfdctest.lightning.force.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/05/25-17:01:51.943 b103 Level-0 table #5: started
+2023/05/25-17:01:51.955 b103 Level-0 table #5: 53523 bytes OK
+2023/05/25-17:01:52.002 b103 Delete type=0 #3
+2023/05/25-17:01:52.016 b103 Manual compaction at level-0 from '\x00\x07\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at (end)

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="4" registryId="fd5c3263-a2f2-41e6-914c-abd70e163be2" visibility="Internal">
+  <summary>&lt;p&gt;This callable fragment is used to generate and account and a desired number of contacts for it&lt;/p&gt;&lt;p&gt;Input:-AccountName&lt;/p&gt;&lt;p&gt;-AccountType&lt;/p&gt;&lt;p&gt;-NoOfContacts&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Output:&lt;/p&gt;&lt;p&gt;-AccountId&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</summary>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="5" title="Salesforce Connect: UAT (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">UAT</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">UAT</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="26" title="Set Values: i">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">i</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="variable">
+                  <path element="NoOfContacts"/>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="2" title="If: {AccountName = null}">
+      <tags/>
+      <arguments>
+        <argument id="condition">
+          <value class="eq">
+            <lhs class="variable">
+              <path element="AccountName"/>
+            </lhs>
+          </value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="then" testItemId="3">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="4" title="Set Values: AccountName">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">AccountName</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="funcCall" id="UniqueId">
+                          <argument id="length">
+                            <value class="value" valueClass="decimal">5</value>
+                          </argument>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="17" title="Create Object: Account=&gt;AccountId">
+      <arguments>
+        <argument id="objectType">
+          <value class="value" valueClass="string">Account</value>
+        </argument>
+        <argument id="resultIdName">
+          <value class="value" valueClass="string">AccountId</value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">UAT</value>
+        </argument>
+        <argument id="assignmentRuleId"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="Name">
+          <value class="variable">
+            <path element="AccountName"/>
+          </value>
+        </argument>
+        <argument argId="ac76a7ea-93ab-4b8e-af39-aa9be1c1d4b4" id="Type">
+          <value class="variable">
+            <path element="AccountType"/>
+          </value>
+        </argument>
+      </arguments>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">UAT</propertyValue>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Account</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Name" name="Name" title="Name"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Type" name="Type" title="Type"/>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.DoWhile" name="DoWhile" testItemId="18" title="While: {i &gt; 0}">
+      <arguments>
+        <argument id="condition">
+          <value class="gt">
+            <lhs class="variable">
+              <path element="i"/>
+            </lhs>
+            <rhs class="value" valueClass="decimal">0</rhs>
+          </value>
+        </argument>
+        <argument id="counterName">
+          <value class="value" valueClass="string">LoopCounter</value>
+        </argument>
+        <argument id="counterStart">
+          <value class="value" valueClass="decimal">1</value>
+        </argument>
+        <argument id="counterEnd"/>
+        <argument id="continueOnFailure"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="19">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="31" title="Create Object: Contact=&gt;ContactId">
+              <arguments>
+                <argument id="objectType">
+                  <value class="value" valueClass="string">Contact</value>
+                </argument>
+                <argument id="resultIdName">
+                  <value class="value" valueClass="string">ContactId</value>
+                </argument>
+                <argument id="apexConnectionName">
+                  <value class="value" valueClass="string">UAT</value>
+                </argument>
+                <argument id="assignmentRuleId"/>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="LastName">
+                  <value class="funcCall" id="UniqueId">
+                    <argument id="length">
+                      <value class="value" valueClass="decimal">4</value>
+                    </argument>
+                    <argument id="format">
+                      <value class="variable">
+                        <path element="ALPHA"/>
+                      </value>
+                    </argument>
+                  </value>
+                </argument>
+                <argument id="AccountId">
+                  <value class="variable">
+                    <path element="AccountId"/>
+                  </value>
+                </argument>
+                <argument id="FirstName">
+                  <value class="compound">
+                    <parts>
+                      <value valueClass="string"> </value>
+                      <funcCall id="UniqueId">
+                        <argument id="length">
+                          <value class="value" valueClass="decimal">2</value>
+                        </argument>
+                        <argument id="format">
+                          <value class="variable">
+                            <path element="ALPHA"/>
+                          </value>
+                        </argument>
+                      </funcCall>
+                    </parts>
+                  </value>
+                </argument>
+              </arguments>
+              <parameterGeneratorProperties>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">UAT</propertyValue>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Contact</propertyValue>
+              </parameterGeneratorProperties>
+              <generatedParameters>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Contact&amp;field=LastName" name="LastName" title="LastName"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Contact&amp;field=AccountId" name="AccountId" title="AccountId"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Contact&amp;field=FirstName" name="FirstName" title="FirstName"/>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="28" title="Set Values: i">
+              <tags/>
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">i</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="sub">
+                          <lhs class="variable">
+                            <path element="i"/>
+                          </lhs>
+                          <rhs class="value" valueClass="decimal">1</rhs>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="30" title="SOQL Query: select Id\n    ,LastName\n    ,FirstName from Contact WHERE AccountId = '{AccountId}'=&gt;ListOfContacts">
+      <arguments>
+        <argument id="soqlQuery">
+          <value class="compound">
+            <parts>
+              <value valueClass="string">select Id\n    ,LastName\n    ,FirstName from Contact WHERE AccountId = '</value>
+              <variable>
+                <path element="AccountId"/>
+              </variable>
+              <value valueClass="string">'</value>
+            </parts>
+          </value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">UAT</value>
+        </argument>
+        <argument id="resultListName">
+          <value class="value" valueClass="string">ListOfContacts</value>
+        </argument>
+        <argument id="soqlColumnAliases">
+          <value class="valueList" mutable="Mutable"/>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+  <params>
+    <param name="AccountName" passwordVariableAllowed="true" title="AccountName">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">1</valueConstraint>
+            <valueConstraint name="maxLength">20</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param linkedToUrl="provar:hasvalue:ac76a7ea-93ab-4b8e-af39-aa9be1c1d4b4" name="AccountType" passwordVariableAllowed="true" title="AccountType">
+      <summary/>
+      <type/>
+    </param>
+    <param name="NoOfContacts" passwordVariableAllowed="true" title="NoOfContacts">
+      <summary/>
+      <type>
+        <numericType>
+          <constraints>
+            <valueConstraint name="length">10</valueConstraint>
+            <valueConstraint name="decimalPlaces">0</valueConstraint>
+            <valueConstraint name="unsigned">false</valueConstraint>
+            <valueConstraint name="showSeparator">false</valueConstraint>
+          </constraints>
+        </numericType>
+      </type>
+    </param>
+  </params>
+  <outputParams>
+    <param name="AccountId" passwordVariableAllowed="true" title="AccountId">
+      <summary>Id of the account created</summary>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">1</valueConstraint>
+            <valueConstraint name="maxLength">20</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+      <sourceValue class="variable">
+        <path element="AccountId"/>
+      </sourceValue>
+    </param>
+    <param name="ListOfContacts" passwordVariableAllowed="true" title="ListOfContacts">
+      <summary>List of Contacts created and associated with such account</summary>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">1</valueConstraint>
+            <valueConstraint name="maxLength">20</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+      <sourceValue class="variable">
+        <path element="ListOfContacts"/>
+      </sourceValue>
+    </param>
+  </outputParams>
+  <args>
+    <argument id="AccountName"/>
+    <argument id="AccountType"/>
+    <argument id="NoOfContacts"/>
+  </args>
+  <outputArgs>
+    <outputArgument id="AccountId">
+      <name class="value" valueClass="string">AccountId</name>
+    </outputArgument>
+    <outputArgument id="ListOfContacts">
+      <name class="value" valueClass="string">ListOfContacts</name>
+    </outputArgument>
+  </outputArgs>
+</testCase>
