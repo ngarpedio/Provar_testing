@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="14">
+<testCase id="18">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: LDV (Test)">
@@ -173,22 +173,6 @@
       <clauses>
         <clause name="hidden" testItemId="15">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiConnect" name="UiConnect" testItemId="178" title="UI Connect: LDV">
-              <arguments>
-                <argument id="connectionName">
-                  <value class="value" valueClass="string">LDV</value>
-                </argument>
-                <argument id="reuseConnectionName"/>
-                <argument id="privateBrowsingMode"/>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">LDV</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="webBrowser"/>
-              </arguments>
-            </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="19" title="On SF Opportunity View screen">
               <arguments>
                 <argument id="uiConnectionName">
@@ -427,7 +411,7 @@
                                 <value class="value" valueClass="string">var</value>
                               </namedValue>
                               <namedValue name="value">
-                                <value class="value" valueClass="string">2</value>
+                                <value class="value" valueClass="string">1</value>
                               </namedValue>
                               <namedValue name="valueScope">
                                 <value class="value" valueClass="string">Test</value>

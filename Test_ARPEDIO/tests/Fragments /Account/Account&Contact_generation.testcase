@@ -112,7 +112,7 @@
           <value class="value" valueClass="string">AccountId</value>
         </argument>
         <argument id="apexConnectionName">
-          <value class="value" valueClass="string">UAT</value>
+          <value class="value" valueClass="string">Admin</value>
         </argument>
         <argument id="assignmentRuleId"/>
         <argument id="resultScope">
@@ -169,7 +169,7 @@
                   <value class="value" valueClass="string">ContactId</value>
                 </argument>
                 <argument id="apexConnectionName">
-                  <value class="value" valueClass="string">UAT</value>
+                  <value class="value" valueClass="string">Admin</value>
                 </argument>
                 <argument id="assignmentRuleId"/>
                 <argument id="resultScope">
