@@ -22,24 +22,10 @@
   <connectionClasses>
     <connectionClass name="sf">
       <connections>
-        <connection name="Admin">
+        <connection name="LDV">
           <summary/>
           <connectionUrls>
             <connectionUrl secureStorageNodeId="9ab1d471-f74a-4439-a3a9-83196c781fdd" url="sf:user=ldvadmin@arpedio.com;password={password};environment=SANDBOX;userLoginUrl=https://arpediocom.sfdctest.my.salesforce.com;lightningMode=true"/>
-            <connectionUrl envName="SIT" secureStorageNodeId="1b579129-3b6e-4b06-8c3e-ef85becb7376" url="sf:user=test@testmatrixnew2.com;password={password};securityToken={securityToken};environment=SANDBOX;userLoginUrl=https://fun-platform-6887.scratch.my.salesforce.com;lightningMode=true"/>
-            <connectionUrl envName="UAT" secureStorageNodeId="4d9fd16e-560e-4904-b3f9-6a670c59a3d2" url="sf:user=test@testmatrixnew2.com;password={password};securityToken={securityToken};environment=SANDBOX;userLoginUrl=https://fun-platform-6887.scratch.my.salesforce.com;lightningMode=true"/>
-          </connectionUrls>
-        </connection>
-        <connection id="d7497500-b6e8-4cec-baeb-6c5bde2ead0e" name="Standard">
-          <summary/>
-          <connectionUrls>
-            <connectionUrl url="sf:user=teststandard@testmatrixnew2.com;environment=PROD_DEV;userLoginUrl=https://fun-platform-6887.scratch.my.salesforce.com;logonAsConnection=Admin;lightningMode=true"/>
-          </connectionUrls>
-        </connection>
-        <connection name="UAT">
-          <summary/>
-          <connectionUrls>
-            <connectionUrl secureStorageNodeId="a08e0949-762c-419a-a1f7-94b77c5b9ede" url="sf:user=testadmin@statussync.com;password={password};environment=SANDBOX;userLoginUrl=https://innovation-ruby-6901.scratch.my.salesforce.com;lightningMode=true"/>
           </connectionUrls>
         </connection>
       </connections>

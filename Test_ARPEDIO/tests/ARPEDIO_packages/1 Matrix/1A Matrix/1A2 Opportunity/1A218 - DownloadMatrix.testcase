@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="14">
+<testCase id="10">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: LDV (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: UAT (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">LDV</value>
+          <value class="value" valueClass="string">Admin</value>
         </argument>
         <argument id="resultName">
-          <value class="value" valueClass="string">LDV</value>
+          <value class="value" valueClass="string">UAT</value>
         </argument>
         <argument id="resultScope">
           <value class="value" valueClass="string">Test</value>
         </argument>
-        <argument id="uiApplicationName">
-          <value class="value" valueClass="string">Sales</value>
-        </argument>
+        <argument id="uiApplicationName"/>
         <argument id="quickUiLogin">
           <value class="value" valueClass="boolean">true</value>
         </argument>
@@ -24,7 +22,7 @@
         </argument>
         <argument id="reuseConnectionName"/>
         <argument id="alreadyOpenBehaviour">
-          <value class="value" valueClass="string">Reuse</value>
+          <value class="value" valueClass="string">Fail</value>
         </argument>
         <argument id="privateBrowsingMode"/>
         <argument id="enableObjectIdLogging">
@@ -117,7 +115,7 @@
                   <value class="value" valueClass="string">OpportunityId</value>
                 </argument>
                 <argument id="apexConnectionName">
-                  <value class="value" valueClass="string">LDV</value>
+                  <value class="value" valueClass="string">UAT</value>
                 </argument>
                 <argument id="assignmentRuleId"/>
                 <argument id="resultScope">
@@ -173,26 +171,10 @@
       <clauses>
         <clause name="hidden" testItemId="15">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiConnect" name="UiConnect" testItemId="178" title="UI Connect: LDV">
-              <arguments>
-                <argument id="connectionName">
-                  <value class="value" valueClass="string">LDV</value>
-                </argument>
-                <argument id="reuseConnectionName"/>
-                <argument id="privateBrowsingMode"/>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">LDV</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="webBrowser"/>
-              </arguments>
-            </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="19" title="On SF Opportunity View screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">LDV</value>
+                  <value class="value" valueClass="string">UAT</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?action=View&amp;object=Opportunity"/>
@@ -239,7 +221,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="20" title="On SF arpediomatrix__matrixPreview Lightning Web component">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">LDV</value>
+                  <value class="value" valueClass="string">UAT</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?lightningWebComponent=arpediomatrix__matrixPreview&amp;pageObject=pageobjects.arpediomatrix__matrixPreview"/>
@@ -344,7 +326,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="158" title="On TestingTable page">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">LDV</value>
+                  <value class="value" valueClass="string">UAT</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.TestingTable"/>
@@ -466,7 +448,7 @@
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="165" title="With demoTable row">
                               <arguments>
                                 <argument id="uiConnectionName">
-                                  <value class="value" valueClass="string">LDV</value>
+                                  <value class="value" valueClass="string">UAT</value>
                                 </argument>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:pageobject:row?field=demoTable"/>
