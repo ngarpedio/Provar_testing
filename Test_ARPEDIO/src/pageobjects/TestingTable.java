@@ -27,13 +27,6 @@ public class TestingTable {
 		public List<ThisTable> thisTable;
 	}
 
-	@FacetFindBys(value = {
-			@FacetFindBy(findBy = @FindBy(xpath = "(//div[contains(@class,'active') and contains(@class,'matrix-table__string-cell')]//table)[1]/tbody/tbody"), facet = UiFacet.DATA_ROWS),
-			@FacetFindBy(findBy = @FindBy(xpath = "(//div[contains(@class,'active') and contains(@class,'oneContent')]//table)[1]/thead/tr"), facet = UiFacet.HEADER_ROW) })
-	@FindBy(xpath = "(//div[contains(@class,'active') and contains(@class,'oneContent')]//table)[1]")
-	@PageTable(firstRowContainsHeaders = true, row = TableNicholas.class)
-	public List<TableNicholas> tableNicholas;
-
 	@PageRow()
 	public static class ThisTable {
 	}
@@ -48,10 +41,6 @@ public class TestingTable {
 		@PageTable(firstRowContainsHeaders = false, row = ProvarGuidedTable.class)
 		public List<ProvarGuidedTable> provarGuidedTable;
 	}
-
-	@FindBy(css = "th.matrix-table__headcell.matrix-table__headcell--narrow")
-	@PageTable(firstRowContainsHeaders = false, row = D.class)
-	public List<D> d;
 
 	@PageRow()
 	public static class ProvarGuidedTable {
@@ -68,10 +57,6 @@ public class TestingTable {
 		public List<Tablee> tablee;
 	}
 
-	@FindBy(css = "#brandBand_2 td.matrix-table__cell.matrix-table__full-cell div")
-	@PageTable(firstRowContainsHeaders = false, row = C.class)
-	public List<C> c;
-
 	@PageRow()
 	public static class Tablee {
 	}
@@ -82,6 +67,21 @@ public class TestingTable {
 		@TextType()
 		@FindBy(xpath = "//td//div//c-matrix-cell//div")
 		public WebElement cUSTOMERSTAKEHOLDERS;
+		@TextType()
+		@JavascriptBy(jspath = "return document.querySelector('arpediomatrix-matrix').shadowRoot.querySelector('c-matrix-table').shadowRoot.querySelectorAll('c-matrix-cell')[15].shadowRoot.querySelector('div')")
+		public WebElement Assessment;
+		@TextType()
+		@JavascriptBy(jspath = "return document.querySelector('arpediomatrix-matrix').shadowRoot.querySelector('c-matrix-table').shadowRoot.querySelectorAll('c-matrix-cell')[1].shadowRoot.querySelector('textarea')")
+		public WebElement Text_for_Notes;
+		@TextType()
+		@FindBy(xpath = "//th[2]")
+		public WebElement TM;
+		@TextType()
+		@JavascriptBy(jspath = "return document.querySelector('arpediomatrix-matrix').shadowRoot.querySelector('c-matrix-table').shadowRoot.querySelectorAll('span')[1]")
+		public WebElement TM1;
+		@TextType()
+		@JavascriptBy(jspath = "return document.querySelector('arpediomatrix-matrix').shadowRoot.querySelector('c-matrix-table').shadowRoot.querySelector('c-matrix-stakeholder-cell').shadowRoot.querySelector('lightning-button-icon').shadowRoot.querySelector('button')")
+		public WebElement removeStakeholder;
 	}
 	@PageTable(firstRowContainsHeaders = false, row = DemoTable.class)
 	@FindBy(xpath = "//table//tr")
@@ -100,4 +100,18 @@ public class TestingTable {
 		str = str+list.size();
 		return str;
 	}
+		public String getColumns()
+	{
+	String str ="";
+		List<WebElement> list = driver.findElements(By.xpath("//table//th"));
+		str = str+list.size();
+		return str;
+	}
+		@TextType()
+		@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//button[normalize-space(.)='Details']/lightning-primitive-icon")
+		public WebElement details;
+
+		@TextType()
+		@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//button[normalize-space(.)='Notes']/lightning-primitive-icon")
+		public WebElement notes;
 }

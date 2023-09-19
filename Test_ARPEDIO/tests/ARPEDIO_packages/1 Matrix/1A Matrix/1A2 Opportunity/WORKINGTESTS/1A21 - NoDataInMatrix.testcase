@@ -492,7 +492,7 @@
                                               <fieldLocator uri="ui:pageobject:field?pageId=pageobjects.TestingTable&amp;field=cUSTOMERSTAKEHOLDERS"/>
                                               <attributeAssertions>
                                                 <uiAttributeAssertion attributeName="value" comparisonType="Contains" normalize="true">
-                                                  <value class="value" valueClass="string">0</value>
+                                                  <value class="value" valueClass="string">(0)</value>
                                                 </uiAttributeAssertion>
                                               </attributeAssertions>
                                             </uiFieldAssertion>

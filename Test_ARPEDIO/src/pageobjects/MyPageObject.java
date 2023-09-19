@@ -55,6 +55,10 @@ public class MyPageObject {
 	}
 	@PageRow()
 	public static class ThisTimepleaseWork {
+
+		@ButtonType()
+		@FindBy(xpath = "//tbody[1]/tr//button[normalize-space(.)='Add Stakeholder']")
+		public WebElement addStakeholder;
 	}
 	@FacetFindBys(value = {
 			@FacetFindBy(findBy = @FindBy(xpath = "(//div[contains(@class,'active') and contains(@class,'oneContent')]//table)[1]/tbody/tr"), facet = UiFacet.DATA_ROWS),
@@ -62,5 +66,8 @@ public class MyPageObject {
 	@FindBy(xpath = "(//div[contains(@class,'active') and contains(@class,'oneContent')]//table)[1]")
 	@PageTable(firstRowContainsHeaders = true, row = ThisTimepleaseWork.class)
 	public List<ThisTimepleaseWork> thisTimepleaseWork;
+	@LinkType()
+	@FindBy(xpath = "//a[normalize-space(.)='Opportunities']")
+	public WebElement opportunities;
 			
 }

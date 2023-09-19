@@ -18,5 +18,11 @@ public class arpediomatrix__arpedioOrgChart {
 	@ButtonType()
 	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//arpediomatrix-arpedio-org-chart//lightning-button/button[normalize-space(.)='Matrix']")
 	public WebElement matrix;
+	@TextType()
+	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//td//td[1]/table/tr/td/div/div/div[1]/div/img")
+	public WebElement removecontactOrgChart;
+	@ButtonType()
+	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//button[normalize-space(.)='Accept']")
+	public WebElement accept;
 	
 }

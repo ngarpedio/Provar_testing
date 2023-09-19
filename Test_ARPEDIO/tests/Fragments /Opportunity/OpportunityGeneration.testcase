@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="14" registryId="3a720ee6-e4ce-40f4-b81e-93b7d18bf45c" visibility="Internal">
+<testCase id="4" registryId="3a720ee6-e4ce-40f4-b81e-93b7d18bf45c" visibility="Internal">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="7" title="Salesforce Connect: LDV (Test)">
@@ -42,6 +42,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="2" title="Salesforce Connect: ApexConnection (Test)">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -93,6 +96,22 @@
       <clauses>
         <clause name="then" testItemId="11">
           <steps>
+            <apiCall apiId="customapis.Random" name="Random" testItemId="22" title="Random: ⇒ RandomDate">
+              <arguments>
+                <argument id="max">
+                  <value class="value" valueClass="string">14</value>
+                </argument>
+                <argument id="offset">
+                  <value class="value" valueClass="decimal">7</value>
+                </argument>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">RandomDate</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+              </arguments>
+            </apiCall>
             <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="19" title="Set Values: CloseDate">
               <arguments>
                 <argument id="values">
@@ -102,33 +121,15 @@
                         <value class="value" valueClass="string">CloseDate</value>
                       </namedValue>
                       <namedValue name="value">
-                        <value class="variable">
-                          <path element="CloseDate"/>
-                        </value>
-                      </namedValue>
-                      <namedValue name="valueScope">
-                        <value class="value" valueClass="string">Test</value>
-                      </namedValue>
-                    </namedValues>
-                  </value>
-                </argument>
-              </arguments>
-            </apiCall>
-          </steps>
-        </clause>
-        <clause name="else" testItemId="17">
-          <steps>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="18" title="Set Values: CloseDate">
-              <arguments>
-                <argument id="values">
-                  <value class="valueList" mutable="Mutable">
-                    <namedValues mutable="Mutable">
-                      <namedValue name="valuePath">
-                        <value class="value" valueClass="string">CloseDate</value>
-                      </namedValue>
-                      <namedValue name="value">
-                        <value class="variable">
-                          <path element="CloseDate"/>
+                        <value class="funcCall" id="DateAdd">
+                          <argument id="date">
+                            <value class="funcCall" id="DateParse"/>
+                          </argument>
+                          <argument id="amount">
+                            <value class="variable">
+                              <path element="RandomDate"/>
+                            </value>
+                          </argument>
                         </value>
                       </namedValue>
                       <namedValue name="valueScope">
@@ -174,12 +175,54 @@
               <namedValue name="valuePath">
                 <value class="value" valueClass="string">StagePicklist</value>
               </namedValue>
-              <namedValue name="value"/>
+              <namedValue name="value">
+                <value class="value" valueClass="string">Prospecting|Needs Analysis|Proposal/Price Quote|Perception Analysis|Value Proposition</value>
+              </namedValue>
               <namedValue name="valueScope">
                 <value class="value" valueClass="string">Test</value>
               </namedValue>
             </namedValues>
           </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.string.Split" name="Split" testItemId="20" title="Split: {StagePicklist}=&gt;|=&gt;PicklistValues">
+      <arguments>
+        <argument id="input">
+          <value class="variable">
+            <path element="StagePicklist"/>
+          </value>
+        </argument>
+        <argument id="separator">
+          <value class="value" valueClass="string">|</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">PicklistValues</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="customapis.Random" name="Random" testItemId="21" title="Random: ⇒ PicklistIndex">
+      <arguments>
+        <argument id="max">
+          <value class="funcCall" id="Count">
+            <argument id="value">
+              <value class="variable">
+                <path element="PicklistValues"/>
+              </value>
+            </argument>
+          </value>
+        </argument>
+        <argument id="offset">
+          <value class="value" valueClass="decimal">1</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">PicklistIndex</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
         </argument>
       </arguments>
     </apiCall>
@@ -204,7 +247,15 @@
           </value>
         </argument>
         <argument id="StageName">
-          <value class="value" valueClass="string">Value Proposition</value>
+          <value class="variable">
+            <path element="PicklistValues">
+              <filter class="conditionFilter">
+                <condition class="variable">
+                  <path element="PicklistIndex"/>
+                </condition>
+              </filter>
+            </path>
+          </value>
         </argument>
         <argument id="CloseDate">
           <value class="variable">

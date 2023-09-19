@@ -28,6 +28,12 @@
             <connectionUrl secureStorageNodeId="9ab1d471-f74a-4439-a3a9-83196c781fdd" url="sf:user=ldvadmin@arpedio.com;password={password};environment=SANDBOX;userLoginUrl=https://arpediocom.sfdctest.my.salesforce.com;lightningMode=true"/>
           </connectionUrls>
         </connection>
+        <connection id="333bdefd-c278-4bba-9952-d9033a9b3367" name="SuccessProvar">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="92609e3e-b0cf-48d4-996e-012bc881f3e1" url="sf:user=success@provar.com;password={password};environment=OTHER;userLoginUrl=https://power-dream-6252.scratch.lightning.force.com/;lightningMode=true"/>
+          </connectionUrls>
+        </connection>
       </connections>
     </connectionClass>
   </connectionClasses>

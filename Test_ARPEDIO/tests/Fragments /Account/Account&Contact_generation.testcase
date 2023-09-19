@@ -2,13 +2,13 @@
 <testCase id="4" registryId="fd5c3263-a2f2-41e6-914c-abd70e163be2" visibility="Internal">
   <summary>&lt;p&gt;This callable fragment is used to generate and account and a desired number of contacts for it&lt;/p&gt;&lt;p&gt;Input:-AccountName&lt;/p&gt;&lt;p&gt;-AccountType&lt;/p&gt;&lt;p&gt;-NoOfContacts&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Output:&lt;/p&gt;&lt;p&gt;-AccountId&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</summary>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="5" title="Salesforce Connect: Admin (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="5" title="Salesforce Connect: LDV (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">Admin</value>
+          <value class="value" valueClass="string">LDV</value>
         </argument>
         <argument id="resultName">
-          <value class="value" valueClass="string">Admin</value>
+          <value class="value" valueClass="string">LDV</value>
         </argument>
         <argument id="resultScope">
           <value class="value" valueClass="string">Test</value>
@@ -112,7 +112,7 @@
           <value class="value" valueClass="string">AccountId</value>
         </argument>
         <argument id="apexConnectionName">
-          <value class="value" valueClass="string">Admin</value>
+          <value class="value" valueClass="string">LDV</value>
         </argument>
         <argument id="assignmentRuleId"/>
         <argument id="resultScope">
@@ -169,7 +169,7 @@
                   <value class="value" valueClass="string">ContactId</value>
                 </argument>
                 <argument id="apexConnectionName">
-                  <value class="value" valueClass="string">Admin</value>
+                  <value class="value" valueClass="string">LDV</value>
                 </argument>
                 <argument id="assignmentRuleId"/>
                 <argument id="resultScope">
@@ -263,7 +263,7 @@
           </value>
         </argument>
         <argument id="apexConnectionName">
-          <value class="value" valueClass="string">UAT</value>
+          <value class="value" valueClass="string">LDV</value>
         </argument>
         <argument id="resultListName">
           <value class="value" valueClass="string">ListOfContacts</value>

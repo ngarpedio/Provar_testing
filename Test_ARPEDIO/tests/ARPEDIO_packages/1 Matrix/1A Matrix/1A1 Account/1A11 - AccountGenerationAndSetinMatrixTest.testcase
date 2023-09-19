@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="10">
+<testCase id="19">
   <summary/>
   <steps>
     <caseCall testCaseId="fd5c3263-a2f2-41e6-914c-abd70e163be2" testCasePath="tests/Fragments /Account/Account&amp;Contact_generation.testcase" testItemId="1">
@@ -63,7 +63,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="4" title="On SF Account View screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">UAT</value>
+          <value class="value" valueClass="string">LDV</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View"/>
