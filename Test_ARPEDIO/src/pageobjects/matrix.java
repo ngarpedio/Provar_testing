@@ -42,6 +42,10 @@ public class matrix {
 		@ButtonType()
 		@JavascriptBy(jspath = "return document.querySelector('arpediomatrix-matrix').shadowRoot.querySelector('c-matrix-table').shadowRoot.querySelector('lightning-button').shadowRoot.querySelector('button')")
 		public WebElement removeStakeholderfinal;
+
+		@TextType()
+		@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//h2[normalize-space(.)='This is not a Salesforce user.']")
+		public WebElement ghostUserText;
 	
 }
 

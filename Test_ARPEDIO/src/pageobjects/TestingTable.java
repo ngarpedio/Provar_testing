@@ -1,5 +1,6 @@
 package pageobjects;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -82,6 +83,12 @@ public class TestingTable {
 		@TextType()
 		@JavascriptBy(jspath = "return document.querySelector('arpediomatrix-matrix').shadowRoot.querySelector('c-matrix-table').shadowRoot.querySelector('c-matrix-stakeholder-cell').shadowRoot.querySelector('lightning-button-icon').shadowRoot.querySelector('button')")
 		public WebElement removeStakeholder;
+		@TextType()
+		@FindBy(xpath = "//button[normalize-space(.)='Add team members']/lightning-primitive-icon")
+		public WebElement addTeamMembers;
+		@TextType()
+		@JavascriptBy(jspath = "return document.querySelector('arpediomatrix-matrix').shadowRoot.querySelector('c-matrix-table').shadowRoot.querySelector('lightning-helptext').shadowRoot.querySelector('lightning-button-icon').shadowRoot.querySelector('button')")
+		public WebElement getteammember;
 	}
 	@PageTable(firstRowContainsHeaders = false, row = DemoTable.class)
 	@FindBy(xpath = "//table//tr")
@@ -114,4 +121,32 @@ public class TestingTable {
 		@TextType()
 		@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//button[normalize-space(.)='Notes']/lightning-primitive-icon")
 		public WebElement notes;
-}
+		
+		public String addteamNon(String member) throws InterruptedException{
+		driver.findElement(By.xpath("//div[@class='slds-form-element__control slds-grow slds-input-has-icon slds-input-has-icon_left-right']/input")).sendKeys(member);
+		Thread.sleep(3000);
+		//driver.findElement(By.xpath("//div/div/ul[@class='slds-listbox slds-listbox_vertical']/li[2]/div")).click();
+		List<WebElement> list=driver.findElements(By.xpath("//div/div/ul[@class='slds-listbox slds-listbox_vertical']/li/div"));
+		if(list.size()>1){
+		list.get(1).click();
+		}else{
+		list.get(0).click();
+		
+		
+		}
+		return member;}
+	public List<String> getMembers(){
+	List<String> s=new ArrayList<String>();
+	List<WebElement> list=driver.findElements(By.xpath("//table[@data-id='matrixTable']/thead/tr/th/span[text()!='CUSTOMER STAKEHOLDERS']"));
+	for(int i=0;i<list.size();i++){
+			s.add(list.get(i).getText());
+	}
+	return s;
+	
+	}
+		}
+		
+		
+		
+		
+		
