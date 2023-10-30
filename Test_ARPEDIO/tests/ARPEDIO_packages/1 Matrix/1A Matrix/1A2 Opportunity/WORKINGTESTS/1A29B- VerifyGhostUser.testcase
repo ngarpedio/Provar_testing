@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase guid="b40cf180-2d89-454b-aa52-c25b0499c6c6" id="0">
+<testCase guid="10da2065-d71f-4dc0-bc96-ca82a788ce18" id="4">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="91664178-9747-4216-83ee-f988e83ab473" name="ApexConnect" testItemId="1" title="Salesforce Connect: LDV (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="2cd880bf-ed68-4267-adf5-afbaf78704c8" name="ApexConnect" testItemId="1" title="Salesforce Connect: LDV (Test)">
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -41,7 +41,7 @@
         <argument id="webBrowser"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Given" guid="895d22e8-3d7b-4eed-a846-c441ea7a6ef8" name="Given" testItemId="11" title="Given: Creating a new opportunity ">
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Given" guid="b77eff90-8299-473f-8b7d-e538bb3007fa" name="Given" testItemId="11" title="Given: Creating a new opportunity ">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Creating a new opportunity </value>
@@ -50,7 +50,7 @@
       <clauses>
         <clause name="hidden" testItemId="3">
           <steps>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="683f9051-63f4-4100-a4c2-58ae531be633" isTitleUpdated="true" name="SetValues" testItemId="13" title="Object and User Data">
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="fbb32b47-a238-442a-beb4-b9880dd7b801" isTitleUpdated="true" name="SetValues" testItemId="13" title="Object and User Data">
               <arguments>
                 <argument id="values">
                   <value class="valueList" mutable="Mutable">
@@ -78,7 +78,7 @@
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="b04304cb-5c1b-406a-9c7b-25f5e41979e5" name="SetValues" testItemId="90" title="Set Values: Days">
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="f67ac695-4dc2-49fe-85aa-68bc172f6edd" name="SetValues" testItemId="90" title="Set Values: Days">
               <arguments>
                 <argument id="values">
                   <value class="valueList" mutable="Mutable">
@@ -106,7 +106,7 @@
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="54a20f76-db67-426d-af7e-2a86a6fddaaa" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="89" title="Create Object: Opportunity=&gt;OpportunityId">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="aad41247-80ce-4ae1-8cea-2f102dd37978" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="89" title="Create Object: Opportunity=&gt;OpportunityId">
               <arguments>
                 <argument id="objectType">
                   <value class="value" valueClass="string">Opportunity</value>
@@ -162,7 +162,7 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.When" guid="f5586bf4-e174-4db4-8f92-0f5c78fbb0ac" name="When" testItemId="25" title="When: Opening Opportunity">
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.When" guid="4eedd4b7-530d-47ec-99b0-c9b6d29a9431" name="When" testItemId="25" title="When: Opening Opportunity">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Opening Opportunity</value>
@@ -171,7 +171,7 @@
       <clauses>
         <clause name="hidden" testItemId="26">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="56435ece-4b17-4939-b8b8-d9cbee48344a" name="UiWithScreen" testItemId="27" title="On SF Opportunity View screen">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="d855cf37-3d6a-47a9-a7bf-dfc3da0d1296" name="UiWithScreen" testItemId="27" title="On SF Opportunity View screen">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">LDV</value>
@@ -218,7 +218,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="e3e45914-79a0-4c14-b748-a3a85d904972" name="UiWithScreen" testItemId="29" title="On SF arpediomatrix__matrixPreview Lightning Web component">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="2a0e9bc1-a1a9-440b-841e-10b74a86deb9" name="UiWithScreen" testItemId="29" title="On SF arpediomatrix__matrixPreview Lightning Web component">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">LDV</value>
@@ -254,7 +254,7 @@
               <clauses>
                 <clause name="substeps" testItemId="30">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="fe853b7e-b406-4dc6-bbc9-5794df46d9bd" name="UiDoAction" testItemId="31" title="Click the Matrix Button button">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="ad17d656-d3c1-405d-be9d-f9e7b0a096fd" name="UiDoAction" testItemId="31" title="Click the Matrix Button button">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=matrixButton"/>
@@ -314,19 +314,19 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Then" guid="bc76194c-24ad-4b56-881b-e786556cdb1d" name="Then" testItemId="112" title="Then: AddAccountTeamMember by search">
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Then" guid="98fe4e8f-c06d-4fc6-9be2-caaf433e844e" name="Then" testItemId="95" title="Then: AddAccountTeamMember by search">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">AddAccountTeamMember by search</value>
         </argument>
       </arguments>
       <clauses>
-        <clause name="hidden" testItemId="113">
+        <clause name="hidden" testItemId="96">
           <steps/>
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="ed7c1b89-d103-46ea-9726-3f248b31d61a" name="UiWithScreen" testItemId="103" title="On TestingTable page">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="8f89f063-e8a6-43b5-a600-53b36bbb70db" name="UiWithScreen" testItemId="103" title="On TestingTable page">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -358,7 +358,7 @@
       <clauses>
         <clause name="substeps" testItemId="104">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" guid="32998987-678b-40c5-8445-3b58a5bebabf" name="UiWithRow" testItemId="105" title="With demoTable row">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" guid="8bbe21aa-e80a-49e8-83c2-f3d7df33c1c6" name="UiWithRow" testItemId="105" title="With demoTable row">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">LDV</value>
@@ -387,7 +387,7 @@
               <clauses>
                 <clause name="substeps" testItemId="106">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="f53c8faf-7eaa-4af2-a125-ad67794373ff" name="UiDoAction" testItemId="107" title="Click the Add Team Members">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="e766a8a6-93db-44f3-9742-2bc6e8b26bef" name="UiDoAction" testItemId="107" title="Click the Add Team Members">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:pageobject:field?pageId=pageobjects.TestingTable&amp;field=addTeamMembers"/>
@@ -438,7 +438,7 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="66e891e9-c6e3-477f-9a15-b36e768e486c" name="UiDoAction" testItemId="126" title="Call the addteamNon method">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="f9ab7e15-0cb9-4f67-a145-6cf419a04020" name="UiDoAction" testItemId="108" title="Call the addteamNon method">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:pageobject:method?operation=addteamNon&amp;pageId=pageobjects.TestingTable"/>
@@ -459,30 +459,13 @@
                           <value class="value" valueClass="string">false</value>
                         </argument>
                         <argument id="param_member">
-                          <value class="value" valueClass="string">ghost</value>
+                          <value class="value" valueClass="string">Carlos</value>
                         </argument>
-                        <argument id="param_resultName"/>
-                        <argument id="param_resultScope"/>
                       </arguments>
                       <generatedParameters>
                         <apiParam group="value" name="param_member" title="Member">
                           <type>
                             <textType/>
-                          </type>
-                        </apiParam>
-                        <apiParam group="value" name="param_resultName" seq="1001" title="Result Name">
-                          <type>
-                            <textType/>
-                          </type>
-                        </apiParam>
-                        <apiParam group="value" name="param_resultScope" seq="1002" title="Result Scope">
-                          <defaultValue>Test</defaultValue>
-                          <type>
-                            <choiceType>
-                              <constraints>
-                                <valueConstraint name="boundedValues">Global:Test Run|Folder:Test Folder|Test:Test Case|GroupStep:Group Step|Local:Test Step</valueConstraint>
-                              </constraints>
-                            </choiceType>
                           </type>
                         </apiParam>
                       </generatedParameters>
@@ -510,7 +493,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="c4835934-a4b1-421a-a63f-6b0acd57d9e4" name="UiWithScreen" testItemId="109" title="On SF matrix Aura component">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="600a48a0-6171-418b-b44d-643d0a36fecf" name="UiWithScreen" testItemId="109" title="On SF matrix Aura component">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -541,40 +524,7 @@
       <clauses>
         <clause name="substeps" testItemId="110">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" guid="75d849c6-af0a-49fc-9a14-571a085b936e" name="UiAssert" testItemId="116" title="UI Assert">
-              <arguments>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="Ghost">
-                      <fieldLocator uri="ui:locator?name=Ghost"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo" normalize="true">
-                          <value class="value" valueClass="string">You are about to add a non-Salesforce user</value>
-                        </uiAttributeAssertion>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" displayValue="]" mutable="Mutable"/>
-                </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" displayValue="]" mutable="Mutable"/>
-                </argument>
-                <argument id="beforeWait"/>
-                <argument id="autoRetry"/>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="f329f56a-6aee-4864-b80c-d7feec5876ba" name="UiDoAction" testItemId="111" title="Click the Add button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="baa38f5b-d987-4540-b4e5-8d079bd37442" name="UiDoAction" testItemId="111" title="Click the Add button">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=add"/>
@@ -625,42 +575,11 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" guid="933bfba6-d9ac-4e08-9036-a5041be42e03" name="UiAssert" testItemId="114" title="UI Assert">
-              <arguments>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="ghostUserText">
-                      <fieldLocator uri="ui:locator?name=ghostUserText"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="None"/>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" displayValue="]" mutable="Mutable"/>
-                </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" displayValue="]" mutable="Mutable"/>
-                </argument>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">GhostUser</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait"/>
-                <argument id="autoRetry"/>
-              </arguments>
-            </apiCall>
           </steps>
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="ac06defe-a545-4d33-9df8-172117f5a647" name="UiWithScreen" testItemId="117" title="On TestingTable page">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="40459420-dbd7-4db0-be8d-8b8eb52d60f7" name="UiWithScreen" testItemId="112" title="On TestingTable page">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -690,9 +609,9 @@
         <argument id="uiTargetUrl"/>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="118">
+        <clause name="substeps" testItemId="113">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" guid="8f25e6f3-33b6-49fb-bcee-f6fe71782d3e" name="UiWithRow" testItemId="119" title="With demoTable row">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" guid="74f57e9c-80fb-42c4-92e9-dc1814cf478a" name="UiWithRow" testItemId="114" title="With demoTable row">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">LDV</value>
@@ -719,12 +638,12 @@
                 <argument id="autoRetry"/>
               </arguments>
               <clauses>
-                <clause name="substeps" testItemId="120">
+                <clause name="substeps" testItemId="115">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="f121c2b6-71ef-406e-a115-f6dc921075f4" name="UiDoAction" testItemId="143" title="Click the Help">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="ccc1376e-46af-4365-92fd-6c1d933d17c8" name="UiDoAction" testItemId="116" title="Click the Getteammember">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:pageobject:field?pageId=pageobjects.TestingTable&amp;field=help"/>
+                          <value class="uiLocator" uri="ui:pageobject:field?pageId=pageobjects.TestingTable&amp;field=getteammember"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -745,7 +664,7 @@
                           <value class="uiWait" uri="default"/>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Click the Help</value>
+                          <value class="value" valueClass="string">Click the Getteammember</value>
                         </argument>
                         <argument id="autoRetry"/>
                         <argument id="ieClickMethod">
@@ -784,109 +703,6 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="9ca51f74-30a9-496c-a388-37ad7c5d70f3" name="UiDoAction" testItemId="169" title="Click the Convert 1">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?pageId=pageobjects.TestingTable&amp;field=convert1"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Convert 1</value>
-                </argument>
-                <argument id="autoRetry"/>
-                <argument id="ieClickMethod">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
-                  <summary>How the click should be executed for Internet Explorer.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="ee285f07-ce6b-4f7b-b700-df261ccf841a" name="UiDoAction" testItemId="145" title="Call the addteamNon method">
-              <tags/>
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:method?pageId=pageobjects.TestingTable&amp;operation=addteamNon"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Call the addteamNon method</value>
-                </argument>
-                <argument id="beforeWait"/>
-                <argument id="afterWait"/>
-                <argument id="autoRetry"/>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="param_member">
-                  <value class="value" valueClass="string">platform</value>
-                </argument>
-                <argument id="param_resultName"/>
-                <argument id="param_resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="param_member" title="Member">
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="param_resultName" seq="1001" title="Result Name">
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="param_resultScope" seq="1002" title="Result Scope">
-                  <defaultValue>Test</defaultValue>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="boundedValues">Global:Test Run|Folder:Test Folder|Test:Test Case|GroupStep:Group Step|Local:Test Step</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
           </steps>
         </clause>
       </clauses>
@@ -898,19 +714,19 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="ce8fdb1f-2490-4051-9793-73db6e7f0ad2" name="UiWithScreen" testItemId="175" title="On TestingTable page">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="40eecc96-dc47-4fcf-b263-ef7a927359ec" name="UiWithScreen" testItemId="118" title="On SF matrix Aura component">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">LDV</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.TestingTable"/>
+          <value class="uiTarget" uri="sf:ui:target?auraComponent=matrix&amp;pageObject=pageobjects.matrix"/>
         </argument>
         <argument id="navigate">
-          <value class="value" valueClass="string">Always</value>
+          <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="targetDescription">
-          <value class="value" valueClass="string">On TestingTable page</value>
+          <value class="value" valueClass="string">On SF matrix Aura component</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
@@ -925,59 +741,46 @@
         <argument id="captureAfter">
           <value class="value" valueClass="string">false</value>
         </argument>
-        <argument id="uiTargetUrl"/>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="176">
+        <clause name="substeps" testItemId="119">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="05d2612c-a842-4755-bf25-ed3389fccdb9" name="UiDoAction" testItemId="177" title="Click the Convert Button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" guid="f885eea3-0b80-4270-85d4-4d4bbbb3d75a" name="UiAssert" testItemId="120" title="UI Assert">
               <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?pageId=pageobjects.TestingTable&amp;field=convertButton"/>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
                 </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
                 </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
+                <argument id="fieldAssertions">
+                  <value class="valueList" mutable="Mutable">
+                    <uiFieldAssertion resultName="ghostUserText">
+                      <fieldLocator uri="ui:locator?name=ghostUserText"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo" normalize="true">
+                          <value class="value" valueClass="string">This is not a Salesforce user.</value>
+                        </uiAttributeAssertion>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                  </value>
                 </argument>
                 <argument id="captureAfter">
                   <value class="value" valueClass="string">false</value>
                 </argument>
-                <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
                 </argument>
-                <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
+                <argument id="pageAssertions">
+                  <value class="valueList" mutable="Mutable"/>
                 </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Convert Button</value>
-                </argument>
+                <argument id="beforeWait"/>
                 <argument id="autoRetry"/>
               </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
             </apiCall>
           </steps>
         </clause>
       </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="uiTargetUrl" title="Web Page">
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
     </apiCall>
   </steps>
-  <tags/>
 </testCase>

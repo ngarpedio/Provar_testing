@@ -178,6 +178,14 @@ public class TestingTable {
 	@ButtonType()
 	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//button[normalize-space(.)='Convert']")
 	public WebElement convertButton;
+
+	@ButtonType()
+	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//button[normalize-space(.)='Show menu']")
+	public WebElement showMenu;
+
+	@LinkType()
+	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//span[normalize-space(.)='Download']")
+	public WebElement DownloadMatrix;
 		}
 		
 		
