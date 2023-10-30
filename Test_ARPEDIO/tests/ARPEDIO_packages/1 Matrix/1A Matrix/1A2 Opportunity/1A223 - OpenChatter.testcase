@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="10">
+<testCase guid="800b70a5-c2d0-478c-85e0-a6f470ff5c84" id="10">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: UAT (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="f950768e-f7ef-4931-a3b3-c195eff0ebaf" name="ApexConnect" testItemId="1" title="Salesforce Connect: UAT (Test)">
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">Admin</value>
@@ -41,7 +41,7 @@
         <argument id="webBrowser"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Given" name="Given" testItemId="2" title="Given: Creating a new opportunity ">
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Given" guid="0038a908-c062-4ce5-ae1e-c29222010495" name="Given" testItemId="2" title="Given: Creating a new opportunity ">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Creating a new opportunity </value>
@@ -50,7 +50,7 @@
       <clauses>
         <clause name="hidden" testItemId="3">
           <steps>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" isTitleUpdated="true" name="SetValues" testItemId="13" title="Object and User Data">
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="6d06cf37-76e7-47f0-ba60-4705dc9ad8b6" isTitleUpdated="true" name="SetValues" testItemId="13" title="Object and User Data">
               <arguments>
                 <argument id="values">
                   <value class="valueList" mutable="Mutable">
@@ -78,7 +78,7 @@
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="90" title="Set Values: Days">
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="3d5d89c3-fe77-4111-bc6a-c9fb6d5d5c7f" name="SetValues" testItemId="90" title="Set Values: Days">
               <arguments>
                 <argument id="values">
                   <value class="valueList" mutable="Mutable">
@@ -106,7 +106,7 @@
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="89" title="Create Object: Opportunity=&gt;OpportunityId">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="609fe1be-1391-4a06-816c-764cd9db59ba" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="89" title="Create Object: Opportunity=&gt;OpportunityId">
               <arguments>
                 <argument id="objectType">
                   <value class="value" valueClass="string">Opportunity</value>
@@ -162,7 +162,7 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.When" name="When" testItemId="14" title="When: Opening Opportunity">
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.When" guid="09e918d6-7980-4a1e-a7ec-34f1d4d8157e" name="When" testItemId="14" title="When: Opening Opportunity">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Opening Opportunity</value>
@@ -171,7 +171,7 @@
       <clauses>
         <clause name="hidden" testItemId="15">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="19" title="On SF Opportunity View screen">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="9265899e-b9fe-42c2-a6af-5f4ed9d95e9e" name="UiWithScreen" testItemId="19" title="On SF Opportunity View screen">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">UAT</value>
@@ -218,7 +218,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="20" title="On SF arpediomatrix__matrixPreview Lightning Web component">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="41f5a441-065a-48b9-94d9-a3f910d3fa32" name="UiWithScreen" testItemId="20" title="On SF arpediomatrix__matrixPreview Lightning Web component">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">UAT</value>
@@ -254,7 +254,7 @@
               <clauses>
                 <clause name="substeps" testItemId="21">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="22" title="Click the Matrix Button button">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="9077300e-a983-4502-8862-7c70d1b7ddf1" name="UiDoAction" testItemId="22" title="Click the Matrix Button button">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=matrixButton"/>

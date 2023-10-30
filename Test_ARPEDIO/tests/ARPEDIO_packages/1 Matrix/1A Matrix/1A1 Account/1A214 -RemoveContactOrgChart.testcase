@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="17">
+<testCase guid="c7d47aab-312d-4b91-ab64-723c00e4de39" id="17">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: LDV (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="23cf59a2-9e7c-46ca-a6ce-01338726054f" name="ApexConnect" testItemId="1" title="Salesforce Connect: LDV (Test)">
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -41,7 +41,7 @@
         <argument id="webBrowser"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Given" name="Given" testItemId="109" title="Given: Opening an Opportunity">
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Given" guid="ffac5b6b-5a10-473e-a287-571dbcb585b9" name="Given" testItemId="109" title="Given: Opening an Opportunity">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Opening an Opportunity</value>
@@ -53,7 +53,7 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexReadObject" name="ApexReadObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.ReadCustomObjectTestStepCommand" testItemId="129" title="Read Object: Account = 001DE000033Y9PiYAK">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexReadObject" guid="2e14b11f-8913-4e7c-9029-c04b801bcf50" name="ApexReadObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.ReadCustomObjectTestStepCommand" testItemId="129" title="Read Object: Account = 001DE000033Y9PiYAK">
       <tags>
         <string>disabled</string>
       </tags>
@@ -90,7 +90,7 @@
         <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Name" name="Name" title="Account Name"/>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="130" title="On SF Account View screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="b2c67e75-08af-4ef5-b0a0-5389d9f81d68" name="UiWithScreen" testItemId="130" title="On SF Account View screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -135,7 +135,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="136" title="On SF arpediomatrix__arpedioOrgChart component in Account view">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="8d2fb49d-0b68-4b39-b757-90a693816822" name="UiWithScreen" testItemId="136" title="On SF arpediomatrix__arpedioOrgChart component in Account view">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -169,7 +169,7 @@
       <clauses>
         <clause name="substeps" testItemId="137">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="138" title="Click the Removecontact Org Chart field">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="8c6c88c1-7eb1-44a9-9cb2-850580539f3f" name="UiDoAction" testItemId="138" title="Click the Removecontact Org Chart field">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=removecontactOrgChart"/>
@@ -206,7 +206,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="139" title="Click the Accept button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="d184ec3d-aaa6-4183-8d6f-06a9541bbd35" name="UiDoAction" testItemId="139" title="Click the Accept button">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=accept"/>

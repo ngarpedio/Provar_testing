@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testProject selectedBrowserProviderDeviceName="Full Screen" selectedBrowserProviderName="Desktop" selectedEnvironment="UAT">
+<testProject guid="497d8533-6dee-464c-879c-c4b38148eba5" selectedBrowserProviderDeviceName="Full Screen" selectedBrowserProviderName="Desktop" selectedEnvironment="UAT">
   <title>/Test_ARPEDIO/.testproject</title>
   <configPath>config</configPath>
   <testsPath>tests</testsPath>
@@ -9,13 +9,13 @@
   <secureStoragePath>.secrets</secureStoragePath>
   <browserDebugPort>0</browserDebugPort>
   <environments>
-    <environment name="SIT">
+    <environment guid="bec7f839-cb2e-4372-97f3-92a297f345e2" name="SIT">
       <summary/>
     </environment>
-    <environment name="UAT">
+    <environment guid="4d16ea66-c269-44b1-b75c-798dad8651d0" name="UAT">
       <summary/>
     </environment>
-    <environment name="PreProd">
+    <environment guid="d9001cb2-ea19-4a52-a793-c8f2c4e7e4a4" name="PreProd">
       <summary/>
     </environment>
   </environments>

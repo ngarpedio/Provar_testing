@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="4" registryId="fd5c3263-a2f2-41e6-914c-abd70e163be2" visibility="Internal">
+<testCase guid="002ef9c4-4a78-448c-ac6c-bd95531b1a5d" id="4" registryId="fd5c3263-a2f2-41e6-914c-abd70e163be2" visibility="Internal">
   <summary>&lt;p&gt;This callable fragment is used to generate and account and a desired number of contacts for it&lt;/p&gt;&lt;p&gt;Input:-AccountName&lt;/p&gt;&lt;p&gt;-AccountType&lt;/p&gt;&lt;p&gt;-NoOfContacts&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Output:&lt;/p&gt;&lt;p&gt;-AccountId&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</summary>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="5" title="Salesforce Connect: LDV (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="00340f49-2924-4928-bf22-aa8621f70751" name="ApexConnect" testItemId="5" title="Salesforce Connect: LDV (Test)">
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -41,7 +41,7 @@
         <argument id="webBrowser"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="26" title="Set Values: i">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="06b4d4dd-7789-47bc-82bf-9d58a773e30f" name="SetValues" testItemId="26" title="Set Values: i">
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -62,7 +62,7 @@
         </argument>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="2" title="If: {AccountName = null}">
+    <apiCall apiId="com.provar.plugins.bundled.apis.If" guid="dc13ad9c-8e48-42d6-ac60-8460ee74b736" name="If" testItemId="2" title="If: {AccountName = null}">
       <tags/>
       <arguments>
         <argument id="condition">
@@ -76,7 +76,7 @@
       <clauses>
         <clause name="then" testItemId="3">
           <steps>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="4" title="Set Values: AccountName">
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="68304a08-8ff9-463a-8bf0-9ba2431907e3" name="SetValues" testItemId="4" title="Set Values: AccountName">
               <arguments>
                 <argument id="values">
                   <value class="valueList" mutable="Mutable">
@@ -103,7 +103,7 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="17" title="Create Object: Account=&gt;AccountId">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="85b42962-4040-477b-81b0-59c35c905f02" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="17" title="Create Object: Account=&gt;AccountId">
       <arguments>
         <argument id="objectType">
           <value class="value" valueClass="string">Account</value>
@@ -138,7 +138,7 @@
         <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Type" name="Type" title="Type"/>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.DoWhile" name="DoWhile" testItemId="18" title="While: {i &gt; 0}">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.DoWhile" guid="650cde55-4cc7-4194-b0bf-8dba0162c992" name="DoWhile" testItemId="18" title="While: {i &gt; 0}">
       <arguments>
         <argument id="condition">
           <value class="gt">
@@ -160,7 +160,7 @@
       <clauses>
         <clause name="substeps" testItemId="19">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="31" title="Create Object: Contact=&gt;ContactId">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="68a3b5f9-6a5f-4d79-a042-ce6e7801e9f2" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="31" title="Create Object: Contact=&gt;ContactId">
               <arguments>
                 <argument id="objectType">
                   <value class="value" valueClass="string">Contact</value>
@@ -220,7 +220,7 @@
                 <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Contact&amp;field=FirstName" name="FirstName" title="FirstName"/>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="28" title="Set Values: i">
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="bf0243d9-903f-4764-9480-d6aa05722dc2" name="SetValues" testItemId="28" title="Set Values: i">
               <tags/>
               <arguments>
                 <argument id="values">
@@ -249,7 +249,7 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="30" title="SOQL Query: select Id\n    ,LastName\n    ,FirstName from Contact WHERE AccountId = '{AccountId}'=&gt;ListOfContacts">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" guid="9db6bd2a-3c35-4981-bfed-4c6289465d7a" name="ApexSoqlQuery" testItemId="30" title="SOQL Query: select Id\n    ,LastName\n    ,FirstName from Contact WHERE AccountId = '{AccountId}'=&gt;ListOfContacts">
       <arguments>
         <argument id="soqlQuery">
           <value class="compound">

@@ -89,6 +89,21 @@ public class TestingTable {
 		@TextType()
 		@JavascriptBy(jspath = "return document.querySelector('arpediomatrix-matrix').shadowRoot.querySelector('c-matrix-table').shadowRoot.querySelector('lightning-helptext').shadowRoot.querySelector('lightning-button-icon').shadowRoot.querySelector('button')")
 		public WebElement getteammember;
+		@TextType()
+		@FindBy(xpath = "//button[normalize-space(.)='Help']/lightning-primitive-icon")
+		public WebElement help;
+		@TextType()
+		@JavascriptBy(jspath = "return document.querySelector('arpediomatrix-matrix').shadowRoot.querySelector('c-matrix-table').shadowRoot.querySelectorAll('c-matrix-cell')[4].shadowRoot.querySelector('textarea')")
+		public WebElement TextArea;
+		@TextType()
+		@FindBy(xpath = "//th[5]")
+		public WebElement TeamMember;
+		@TextType()
+		@FindBy(xpath = "//th[4]")
+		public WebElement TeamMember1;
+		@TextType()
+		@FindBy(xpath = "//th[4]")
+		public WebElement TeamMember11;
 	}
 	@PageTable(firstRowContainsHeaders = false, row = DemoTable.class)
 	@FindBy(xpath = "//table//tr")
@@ -144,6 +159,25 @@ public class TestingTable {
 	return s;
 	
 	}
+	@TextType()
+	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//button[normalize-space(.)='Get help']/lightning-primitive-icon")
+	public WebElement getHelp;
+
+	@TextType()
+	@FindBy(xpath = "//b[normalize-space(.)='We hope you enjoy using the ARPEDIO Relationship Tool.']")
+	public WebElement answer;
+
+	@LinkType()
+	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//a[normalize-space(.)='Convert']")
+	public WebElement convert;
+
+	@LinkType()
+	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//a[normalize-space(.)='Convert']")
+	public WebElement convert1;
+
+	@ButtonType()
+	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//button[normalize-space(.)='Convert']")
+	public WebElement convertButton;
 		}
 		
 		

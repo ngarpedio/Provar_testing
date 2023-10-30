@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="21">
+<testCase guid="2275e1a1-4970-425a-98e9-6e3dedb18a81" id="21">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: LDV (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="085d7110-bb4d-4a71-8f2b-d3fa2cc2a7a8" name="ApexConnect" testItemId="1" title="Salesforce Connect: LDV (Test)">
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -43,7 +43,7 @@
         <argument id="webBrowser"/>
       </arguments>
     </apiCall>
-    <caseCall testCaseId="fd5c3263-a2f2-41e6-914c-abd70e163be2" testCasePath="tests/Fragments /Account/Account&amp;Contact_generation.testcase" testItemId="2">
+    <caseCall guid="c87b0c79-55d5-4648-bddd-5ce362cc6c74" testCaseId="fd5c3263-a2f2-41e6-914c-abd70e163be2" testCasePath="tests/Fragments /Account/Account&amp;Contact_generation.testcase" testItemId="2">
       <tags>
         <string>disabled</string>
       </tags>
@@ -65,7 +65,7 @@
         </outputArgument>
       </outputArguments>
     </caseCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="24" title="SOQL Query: select Id from Account WHERE Name ='Acme'=&gt;AccountIdList">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" guid="ff8431f4-7a4c-4de3-af61-2538041c22d8" name="ApexSoqlQuery" testItemId="24" title="SOQL Query: select Id from Account WHERE Name ='Acme'=&gt;AccountIdList">
       <arguments>
         <argument id="soqlQuery">
           <value class="value" valueClass="string">select Id from Account WHERE Name ='Acme'</value>
@@ -84,7 +84,7 @@
         </argument>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="3" title="On SF Account View screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="13ad36e9-1e01-497d-9a4b-bd752741125c" name="UiWithScreen" testItemId="3" title="On SF Account View screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -125,7 +125,7 @@
       <clauses>
         <clause name="substeps" testItemId="4">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="7" title="On SF arpediomatrix__matrixPreview component in Account view">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="fcadfaa0-8227-4e8e-a497-8d7a9aef8af0" name="UiWithScreen" testItemId="7" title="On SF arpediomatrix__matrixPreview component in Account view">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">LDV</value>
@@ -166,7 +166,7 @@
               <clauses>
                 <clause name="substeps" testItemId="9">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="12" title="Click the Matrix Button button">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="60aa46eb-54d1-4b14-ae8b-10a7556aaecf" name="UiDoAction" testItemId="12" title="Click the Matrix Button button">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=matrixButton"/>
@@ -241,7 +241,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="14" title="On TestingTable page">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="cd85bd4c-059b-46d4-8465-1e860fadd268" name="UiWithScreen" testItemId="14" title="On TestingTable page">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -273,7 +273,7 @@
       <clauses>
         <clause name="substeps" testItemId="15">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="18" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" guid="67ddba01-cfc5-431b-afb4-6045855455cb" name="UiAssert" testItemId="18" title="UI Assert">
               <arguments>
                 <argument id="fieldAssertions">
                   <value class="valueList" mutable="Mutable">
@@ -306,7 +306,7 @@
                 <argument id="autoRetry"/>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="20" title="Assert: {AccountTeamMember.fields.cUSTOMERSTAKEHOLDERS.value} IsEmpty ">
+            <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" guid="ef59b0bc-2037-41d6-b61a-b77c8c2b31bb" name="AssertValues" testItemId="20" title="Assert: {AccountTeamMember.fields.cUSTOMERSTAKEHOLDERS.value} IsEmpty ">
               <arguments>
                 <argument id="expectedValue">
                   <value class="variable">

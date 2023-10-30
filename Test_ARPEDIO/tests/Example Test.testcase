@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="1">
+<testCase guid="29cfd81b-1283-4bd9-b679-f4fea1b9c671" id="1">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Admin (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="7ea3f7bd-0150-410a-86f3-3630bccea60c" name="ApexConnect" testItemId="1" title="Salesforce Connect: Admin (Test)">
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">Admin</value>
@@ -43,7 +43,7 @@
         <argument id="webBrowser"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Given" name="Given" testItemId="2" title="Given: Users should be added to Accounnt">
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Given" guid="a6cbae38-4f8a-4771-9e97-eda1fdf73c58" name="Given" testItemId="2" title="Given: Users should be added to Accounnt">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Users should be added to Accounnt</value>
@@ -52,7 +52,7 @@
       <clauses>
         <clause name="hidden" testItemId="3">
           <steps>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" isTitleUpdated="true" name="SetValues" testItemId="4" title="Object and User Data">
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="9b94cad5-773f-477e-ae68-18dc717ac647" isTitleUpdated="true" name="SetValues" testItemId="4" title="Object and User Data">
               <arguments>
                 <argument id="values">
                   <value class="valueList" mutable="Mutable">
@@ -102,7 +102,7 @@
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="6" title="Create Object: Account=&gt;AccountId">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="351db46f-84e8-4397-8252-8b0c4a73b54d" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="6" title="Create Object: Account=&gt;AccountId">
               <arguments>
                 <argument id="objectType">
                   <value class="value" valueClass="string">Account</value>
@@ -143,7 +143,7 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.When" name="When" testItemId="7" title="When: Opening the Account">
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.When" guid="ed7f3816-5f38-4065-a4c9-64c7ccf1a62e" name="When" testItemId="7" title="When: Opening the Account">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Opening the Account</value>
@@ -152,7 +152,7 @@
       <clauses>
         <clause name="hidden" testItemId="8">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiConnect" name="UiConnect" testItemId="15" title="UI Connect: Standard">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiConnect" guid="75ea2f0b-61e6-4d04-a34c-a03c3a0670fb" name="UiConnect" testItemId="15" title="UI Connect: Standard">
               <tags>
                 <string>disabled</string>
               </tags>
@@ -171,7 +171,7 @@
                 <argument id="webBrowser"/>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="9" title="On SF Account View screen">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="96c9523c-ebf1-4b73-b434-8b2779547f2d" name="UiWithScreen" testItemId="9" title="On SF Account View screen">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">Admin</value>
@@ -207,7 +207,7 @@
               <clauses>
                 <clause name="substeps" testItemId="10">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="16" title="Click the Team Add Team Members button">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="df4abc40-ae2b-4df0-90f5-982f05127c90" name="UiDoAction" testItemId="16" title="Click the Team Add Team Members button">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?binding=sf%3Aui%3Abinding%3Aobject%3Frelationship%3DAccountTeamMembers%26object%3DAccount%26action%3DAccountTeamMemberMultiAdd&amp;name=AccountTeamMemberMultiAdd"/>
@@ -270,7 +270,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="17" title="On SF Account Team Member Add Team Members screen">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="e02da1df-e347-409f-9036-e919393107ef" name="UiWithScreen" testItemId="17" title="On SF Account Team Member Add Team Members screen">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">Admin</value>
@@ -304,7 +304,7 @@
               <clauses>
                 <clause name="substeps" testItemId="18">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="19" title="With Teams rows 1">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" guid="8b592a55-5f26-4113-9b0d-2749e443959d" name="UiWithRow" testItemId="19" title="With Teams rows 1">
                       <arguments>
                         <argument id="uiConnectionName">
                           <value class="value" valueClass="string">Admin</value>
@@ -335,7 +335,7 @@
                       <clauses>
                         <clause name="substeps" testItemId="20">
                           <steps>
-                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="21" title="Set the User reference to {user1}">
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="7e6db02d-fc8b-41e7-947b-1ff3d8862eed" name="UiDoAction" testItemId="21" title="Set the User reference to {user1}">
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccountTeamMember%26field%3DUserId&amp;name=user"/>
@@ -396,7 +396,7 @@
                         </clause>
                       </clauses>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="22" title="With Teams rows 1">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" guid="e46d4a83-7ca5-4517-8cf0-6173a5d6be81" name="UiWithRow" testItemId="22" title="With Teams rows 1">
                       <arguments>
                         <argument id="uiConnectionName">
                           <value class="value" valueClass="string">Admin</value>
@@ -427,7 +427,7 @@
                       <clauses>
                         <clause name="substeps" testItemId="23">
                           <steps>
-                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="26" title="Set the Team Role picklist to Channel Manager">
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="f97e4aa4-1797-4d7a-8642-395344be8275" name="UiDoAction" testItemId="26" title="Set the Team Role picklist to Channel Manager">
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccountTeamMember%26field%3DTeamMemberRole&amp;name=teamRole"/>
@@ -491,7 +491,7 @@
                         </clause>
                       </clauses>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="30" title="Click the Save Button button">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="dedaa624-6952-41a6-8204-c4ae675be313" name="UiDoAction" testItemId="30" title="Click the Save Button button">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=saveButton"/>

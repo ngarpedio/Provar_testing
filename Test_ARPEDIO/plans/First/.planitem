@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testPlan>
+<testPlan guid="5b059ab9-baaf-4e30-beb7-8041a3e2c166">
   <planSettings/>
   <planFeatures>
     <planFeature enabled="true" name="PDF" type="OUTPUT">
@@ -60,10 +60,10 @@
     <planFeature enabled="true" name="EMAIL" type="NOTIFICATION">
       <settings mutable="Mutable">
         <namedValue name="to">
-          <value class="value" valueClass="string"/>
+          <value class="value"/>
         </namedValue>
         <namedValue name="cc">
-          <value class="value" valueClass="string"/>
+          <value class="value"/>
         </namedValue>
         <namedValue name="subject">
           <value class="value" valueClass="string">Test Plan Execution</value>

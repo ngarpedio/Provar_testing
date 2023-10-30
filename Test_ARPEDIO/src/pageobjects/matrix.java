@@ -46,6 +46,26 @@ public class matrix {
 		@TextType()
 		@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//h2[normalize-space(.)='This is not a Salesforce user.']")
 		public WebElement ghostUserText;
+
+		@TextType()
+		@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//h2[normalize-space(.)='You are about to add a non-Salesforce user']")
+		public WebElement Ghost;
+
+		@LinkType()
+		@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//a[normalize-space(.)='Tutorial']")
+		public WebElement tutorial;
+
+		@LinkType()
+		@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//a[normalize-space(.)='Convert']")
+		public WebElement convert;
+
+		@LinkType()
+		@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//a[normalize-space(.)='Convert']")
+		public WebElement convert1;
+
+		@ButtonType()
+		@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//button[normalize-space(.)='Convert']")
+		public WebElement convertButton;
 	
 }
 

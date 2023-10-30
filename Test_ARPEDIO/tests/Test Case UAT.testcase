@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="8">
+<testCase guid="0a869271-86e3-4ead-a1f5-1e76c33e40ad" id="8">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: UAT (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="6bfe1a5e-6390-47a6-b6ce-d5de34a486db" name="ApexConnect" testItemId="1" title="Salesforce Connect: UAT (Test)">
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">UAT</value>
@@ -41,7 +41,7 @@
         <argument id="webBrowser"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Given" name="Given" testItemId="2" title="Given: Creating a new account ">
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Given" guid="5bc5dd61-07db-4087-b63a-dcc0648807f3" name="Given" testItemId="2" title="Given: Creating a new account ">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Creating a new account </value>
@@ -50,7 +50,7 @@
       <clauses>
         <clause name="hidden" testItemId="3">
           <steps>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" isTitleUpdated="true" name="SetValues" testItemId="13" title="Object and User Data">
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="30940296-145f-42af-95db-2454de87704d" isTitleUpdated="true" name="SetValues" testItemId="13" title="Object and User Data">
               <arguments>
                 <argument id="values">
                   <value class="valueList" mutable="Mutable">
@@ -78,7 +78,7 @@
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="8" title="Create Object: Account=&gt;AccountId">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="33c95f34-9216-4ae4-a78f-e1006c548acb" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="8" title="Create Object: Account=&gt;AccountId">
               <arguments>
                 <argument id="objectType">
                   <value class="value" valueClass="string">Account</value>
@@ -119,7 +119,7 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.When" name="When" testItemId="14" title="When: Opening Account">
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.When" guid="02ecc4e0-c3a9-48fa-99fd-1f00483b513a" name="When" testItemId="14" title="When: Opening Account">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Opening Account</value>
@@ -128,7 +128,7 @@
       <clauses>
         <clause name="hidden" testItemId="15">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="19" title="On SF Account View screen">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="e40bc29e-8d7a-47f8-b13d-7cbadbc91060" name="UiWithScreen" testItemId="19" title="On SF Account View screen">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">UAT</value>
@@ -175,7 +175,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="20" title="On SF arpediomatrix__arpedioOrgChart component in Account view">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="dfa4ea9c-9542-4d54-98d1-67a1ccd492f8" name="UiWithScreen" testItemId="20" title="On SF arpediomatrix__arpedioOrgChart component in Account view">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">UAT</value>
@@ -211,7 +211,7 @@
               <clauses>
                 <clause name="substeps" testItemId="21">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="22" title="Click the Matrix button">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="51080e38-2415-4a2a-b0b1-97855cafa71e" name="UiDoAction" testItemId="22" title="Click the Matrix button">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=matrix"/>
@@ -278,7 +278,7 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Then" name="Then" testItemId="38" title="Then: Matrix shows no data">
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Then" guid="3ac02395-c9e1-4d9e-81f5-7d9e4686b642" name="Then" testItemId="38" title="Then: Matrix shows no data">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Matrix shows no data</value>
@@ -288,7 +288,7 @@
         <clause name="hidden" testItemId="39"/>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="42" title="On MyPageObject page">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="8e841341-9f7b-47c4-8126-b9082dada5f8" name="UiWithScreen" testItemId="42" title="On MyPageObject page">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">UAT</value>
@@ -320,7 +320,7 @@
       <clauses>
         <clause name="substeps" testItemId="43">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="62" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" guid="de1b9846-ea18-471e-8771-a2a37c6e1b4e" name="UiAssert" testItemId="62" title="UI Assert">
               <arguments>
                 <argument id="fieldAssertions">
                   <value class="valueList" mutable="Mutable">
@@ -353,7 +353,7 @@
                 <argument id="autoRetry"/>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="61" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" guid="4d690ab9-4f65-4dd6-9397-4d943725c755" name="UiAssert" testItemId="61" title="UI Assert">
               <arguments>
                 <argument id="fieldAssertions">
                   <value class="valueList" mutable="Mutable">
@@ -386,7 +386,7 @@
                 <argument id="autoRetry"/>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="60" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" guid="a215d8ac-09a0-471f-ae6b-6721841e26b3" name="UiAssert" testItemId="60" title="UI Assert">
               <arguments>
                 <argument id="fieldAssertions">
                   <value class="valueList" mutable="Mutable">
@@ -419,7 +419,7 @@
                 <argument id="autoRetry"/>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="59" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" guid="ec1970ae-1143-44bc-993d-d7bc05962973" name="UiAssert" testItemId="59" title="UI Assert">
               <arguments>
                 <argument id="fieldAssertions">
                   <value class="valueList" mutable="Mutable">
@@ -452,7 +452,7 @@
                 <argument id="autoRetry"/>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="58" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" guid="56656cac-5768-4c32-8b2c-ec77bef86738" name="UiAssert" testItemId="58" title="UI Assert">
               <arguments>
                 <argument id="fieldAssertions">
                   <value class="valueList" mutable="Mutable">
@@ -485,7 +485,7 @@
                 <argument id="autoRetry"/>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="57" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" guid="15db7b17-8250-48e1-b1cf-798c942fe852" name="UiAssert" testItemId="57" title="UI Assert">
               <arguments>
                 <argument id="fieldAssertions">
                   <value class="valueList" mutable="Mutable">
@@ -518,7 +518,7 @@
                 <argument id="autoRetry"/>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.ForEach" name="ForEach" testItemId="63" title="For Each: =&gt;">
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.ForEach" guid="0acc17f5-928c-4160-8e1c-50e1170db92a" name="ForEach" testItemId="63" title="For Each: =&gt;">
               <arguments>
                 <argument id="list"/>
                 <argument id="fromItem">

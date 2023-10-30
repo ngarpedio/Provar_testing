@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="2">
+<testCase guid="f313f630-3635-49a9-b9e0-bfb7ca60b252" id="2">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="4" title="Salesforce Connect: UAT (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="f72585de-5a1b-4e4d-a727-71ff0d4a0f53" name="ApexConnect" testItemId="4" title="Salesforce Connect: UAT (Test)">
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">UAT</value>
@@ -41,7 +41,7 @@
         <argument id="webBrowser"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.When" name="When" testItemId="1" title="When: need to set new values (objects) drag &quot;Set Values&quot; from Control">
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.When" guid="f3b6c3ab-360b-4cf0-bed8-42e56cf5147f" name="When" testItemId="1" title="When: need to set new values (objects) drag &quot;Set Values&quot; from Control">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">need to set new values (objects) drag "Set Values" from Control</value>
@@ -51,7 +51,7 @@
         <clause name="hidden" testItemId="2"/>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="5" title="SOQL Query: select LastName\n    ,FirstName from Contact WHERE IsDeleted = false LIMIT 10=&gt;ContactRows">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" guid="ab1353c2-6363-4ea5-afb7-a818561e9f47" name="ApexSoqlQuery" testItemId="5" title="SOQL Query: select LastName\n    ,FirstName from Contact WHERE IsDeleted = false LIMIT 10=&gt;ContactRows">
       <arguments>
         <argument id="soqlQuery">
           <value class="value" valueClass="string">select LastName\n    ,FirstName from Contact WHERE IsDeleted = false LIMIT 10</value>
@@ -70,7 +70,7 @@
         </argument>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" isTitleUpdated="true" name="SetValues" testItemId="3" title="Set names for your variables and the function that creates it\n">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="a2bed3d2-a51f-4341-a510-871a746b89eb" isTitleUpdated="true" name="SetValues" testItemId="3" title="Set names for your variables and the function that creates it\n">
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -130,7 +130,7 @@
         </argument>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="6" title="Create Object: Contact=&gt;ContactId">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="5ebbe303-47c6-4693-856e-200be1fdf107" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="6" title="Create Object: Contact=&gt;ContactId">
       <arguments>
         <argument id="objectType">
           <value class="value" valueClass="string">Contact</value>

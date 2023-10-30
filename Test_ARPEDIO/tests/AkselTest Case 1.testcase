@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="10">
+<testCase guid="3f5797a5-e01e-4139-847d-1b771080a886" id="10">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Admin (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="d6d38e6a-6661-4849-9155-8e8bea60460c" name="ApexConnect" testItemId="1" title="Salesforce Connect: Admin (Test)">
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -43,7 +43,7 @@
         <argument id="webBrowser"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="72" title="Data Setup">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" guid="4d7c9616-97c7-47ec-8537-a8bfa68b5200" name="StepGroup" testItemId="72" title="Data Setup">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Data Setup</value>
@@ -52,7 +52,7 @@
       <clauses>
         <clause name="hidden" testItemId="73">
           <steps>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="71" title="Set Values: AccountName">
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="db58b491-5ad6-4053-8193-dc30109f0323" name="SetValues" testItemId="71" title="Set Values: AccountName">
               <arguments>
                 <argument id="values">
                   <value class="valueList" mutable="Mutable">
@@ -85,7 +85,7 @@
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="70" title="Set Values: Contact1">
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="4ef36143-8329-4fd2-82d3-6cbf0410c9e3" name="SetValues" testItemId="70" title="Set Values: Contact1">
               <arguments>
                 <argument id="values">
                   <value class="valueList" mutable="Mutable">
@@ -104,7 +104,7 @@
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="69" title="Set Values: Contact2">
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="bda8475b-4f98-41b4-b300-00bba178850f" name="SetValues" testItemId="69" title="Set Values: Contact2">
               <arguments>
                 <argument id="values">
                   <value class="valueList" mutable="Mutable">
@@ -127,7 +127,7 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="81" title="Create Object: Account=&gt;AccountId">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="8cf5eafb-1a97-4c13-86dd-f3efe639d127" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="81" title="Create Object: Account=&gt;AccountId">
       <arguments>
         <argument id="objectType">
           <value class="value" valueClass="string">Account</value>
@@ -156,7 +156,7 @@
         <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Name" name="Name" title="Name"/>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="66" title="On SF Account Home screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="03a123ec-7dee-4ea7-9c1a-08c92e3615ec" name="UiWithScreen" testItemId="66" title="On SF Account Home screen">
       <tags>
         <string>disabled</string>
       </tags>
@@ -190,7 +190,7 @@
       <clauses>
         <clause name="substeps" testItemId="3">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="4" title="Click the New button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="bb854a7e-ed2d-4388-b1d2-be0a0da4bd86" name="UiDoAction" testItemId="4" title="Click the New button">
               <tags>
                 <string>disabled</string>
               </tags>
@@ -248,7 +248,7 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="67" title="On SF Account New screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="32fc3bc9-0610-4e3f-9070-b441ae82b4aa" name="UiWithScreen" testItemId="67" title="On SF Account New screen">
       <tags>
         <string>disabled</string>
       </tags>
@@ -288,7 +288,7 @@
       <clauses>
         <clause name="substeps" testItemId="6">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="7" title="Set the Account Name field to {AccountName}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="f5366e4c-eba9-41b2-8fb1-7e1b89c68009" name="UiDoAction" testItemId="7" title="Set the Account Name field to {AccountName}">
               <tags>
                 <string>disabled</string>
               </tags>
@@ -353,7 +353,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="8" title="Click the Save button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="189ade56-9ab6-41cb-a042-26c0e5818d7c" name="UiDoAction" testItemId="8" title="Click the Save button">
               <tags>
                 <string>disabled</string>
               </tags>
@@ -432,7 +432,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" isTitleUpdated="true" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="63" title="Create First Contact">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="f7383713-2a64-479d-9cb7-73a5677f9ff4" isTitleUpdated="true" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="63" title="Create First Contact">
       <arguments>
         <argument id="objectType">
           <value class="value" valueClass="string">Contact</value>
@@ -467,7 +467,7 @@
         <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Contact&amp;field=AccountId" name="AccountId" title="AccountId"/>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" isTitleUpdated="true" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="65" title="Create Second Contact">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="99818ef8-d8f6-48b5-95b6-608dea7cd421" isTitleUpdated="true" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="65" title="Create Second Contact">
       <arguments>
         <argument id="objectType">
           <value class="value" valueClass="string">Contact</value>
@@ -502,7 +502,7 @@
         <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Contact&amp;field=AccountId" name="AccountId" title="AccountId"/>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="48" title="On SF Account View screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="9f2b9807-15ca-4083-ac6f-9995832f000e" name="UiWithScreen" testItemId="48" title="On SF Account View screen">
       <tags/>
       <arguments>
         <argument id="uiConnectionName">
@@ -550,7 +550,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="57" title="On AccountMapping page">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="ab08cf8c-fa1a-49d9-be29-1fa11b01f82e" name="UiWithScreen" testItemId="57" title="On AccountMapping page">
       <tags>
         <string>disabled</string>
       </tags>
@@ -585,7 +585,7 @@
       <clauses>
         <clause name="substeps" testItemId="58">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="59" title="Click the Relationship Mapping">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="27edc5b0-1adc-4b22-8308-0e2b6cb52cb5" name="UiDoAction" testItemId="59" title="Click the Relationship Mapping">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:pageobject:field?field=relationshipMapping&amp;pageId=pageobjects.AccountMapping"/>
@@ -636,7 +636,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="82" title="Click the A RPEDIO Matrix">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="bf34b045-c60d-4a22-8344-7beb0824fa89" name="UiDoAction" testItemId="82" title="Click the A RPEDIO Matrix">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:pageobject:field?pageId=pageobjects.AccountMapping&amp;field=aRPEDIOMatrix"/>
@@ -698,7 +698,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="83" title="On SF arpediomatrix__matrixPreview component in Account view">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="035ea843-57b2-41ab-9c93-1fa6907e2bb7" name="UiWithScreen" testItemId="83" title="On SF arpediomatrix__matrixPreview component in Account view">
       <tags>
         <string>disabled</string>
       </tags>
@@ -746,7 +746,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="86" title="On SF arpediomatrix__arpedioOrgChart component in Account view">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="8f48affd-9304-4e75-95e5-f1cbb33ebb56" name="UiWithScreen" testItemId="86" title="On SF arpediomatrix__arpedioOrgChart component in Account view">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">Admin</value>
@@ -780,7 +780,7 @@
       <clauses>
         <clause name="substeps" testItemId="87">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="88" title="Click the Click Contact Org Chart field">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="fd47ca93-d67a-40bf-aead-b4c0c38e3946" name="UiDoAction" testItemId="88" title="Click the Click Contact Org Chart field">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=clickContactOrgChart"/>
@@ -831,7 +831,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="94" title="Click the Contact Add Org Chart Confirm button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="eb371102-319e-4e80-a652-dafbc3964ef4" name="UiDoAction" testItemId="94" title="Click the Contact Add Org Chart Confirm button">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=ContactAddOrgChartConfirm"/>
@@ -882,7 +882,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="93" title="Click the Contact Org Chart 2 field">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="14a95515-e0a6-4362-b679-58fa10943f1f" name="UiDoAction" testItemId="93" title="Click the Contact Org Chart 2 field">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=ContactOrgChart2"/>
@@ -933,7 +933,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="96" title="Click the Contact Add Org Chart Confirm button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="7435df52-7098-4a54-85c9-23d32dd49129" name="UiDoAction" testItemId="96" title="Click the Contact Add Org Chart Confirm button">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=ContactAddOrgChartConfirm"/>
@@ -984,7 +984,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" isTitleUpdated="true" name="UiDoAction" testItemId="45" title="Drag the Contact">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="a45d3210-0e26-4796-910f-eea1bf8683e1" isTitleUpdated="true" name="UiDoAction" testItemId="45" title="Drag the Contact">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=draggableContact1"/>
@@ -1006,7 +1006,7 @@
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" isTitleUpdated="true" name="UiDoAction" testItemId="46" title="Drop on Contact">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="b6dabc08-e66b-42a1-be29-3e59e319b4d3" isTitleUpdated="true" name="UiDoAction" testItemId="46" title="Drop on Contact">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=ContactOrgChart2"/>
@@ -1040,7 +1040,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="38" title="On arpediomatrix__arpedioOrgChart page">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="14eee437-d9e4-4e0f-b5ab-9615b8c09676" name="UiWithScreen" testItemId="38" title="On arpediomatrix__arpedioOrgChart page">
       <tags>
         <string>disabled</string>
       </tags>
@@ -1075,7 +1075,7 @@
       <clauses>
         <clause name="substeps" testItemId="39">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiNavigate" name="UiNavigate" testItemId="77" title="Navigate: Refresh">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiNavigate" guid="cbcc6aaa-6381-4542-86fa-b15ddaedf477" name="UiNavigate" testItemId="77" title="Navigate: Refresh">
               <arguments>
                 <argument id="navigate">
                   <value class="value" valueClass="string">Refresh</value>
@@ -1099,7 +1099,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="43" title="On arpediomatrix__arpedioOrgChart page">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="ee5b43e1-99fb-455b-a42b-3e1c959ca992" name="UiWithScreen" testItemId="43" title="On arpediomatrix__arpedioOrgChart page">
       <tags>
         <string>disabled</string>
       </tags>
@@ -1144,7 +1144,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexDeleteObject" name="ApexDeleteObject" testItemId="78" title="Delete Object: {AccountId}">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexDeleteObject" guid="745e0672-b782-4439-862e-ac8dce194c02" name="ApexDeleteObject" testItemId="78" title="Delete Object: {AccountId}">
       <tags/>
       <arguments>
         <argument id="apexConnectionName">

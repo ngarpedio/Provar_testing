@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="4" registryId="3a720ee6-e4ce-40f4-b81e-93b7d18bf45c" visibility="Internal">
+<testCase guid="ec27edaa-40a2-4b13-8ed4-fb16c4688e87" id="4" registryId="3a720ee6-e4ce-40f4-b81e-93b7d18bf45c" visibility="Internal">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="7" title="Salesforce Connect: LDV (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="ea91c1fd-be1a-4c4d-9d5e-7751718840c0" name="ApexConnect" testItemId="7" title="Salesforce Connect: LDV (Test)">
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -41,7 +41,7 @@
         <argument id="webBrowser"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="2" title="Salesforce Connect: ApexConnection (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="e0ac7d0a-8a2f-42ac-922e-1567c04579b1" name="ApexConnect" testItemId="2" title="Salesforce Connect: ApexConnection (Test)">
       <tags>
         <string>disabled</string>
       </tags>
@@ -83,7 +83,7 @@
         <argument id="webBrowser"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="10" title="If: {CloseDate = null}">
+    <apiCall apiId="com.provar.plugins.bundled.apis.If" guid="b74cba01-b4c3-41f9-a1a1-2b7d95d2f1c7" name="If" testItemId="10" title="If: {CloseDate = null}">
       <arguments>
         <argument id="condition">
           <value class="eq">
@@ -96,7 +96,7 @@
       <clauses>
         <clause name="then" testItemId="11">
           <steps>
-            <apiCall apiId="customapis.Random" name="Random" testItemId="22" title="Random: ⇒ RandomDate">
+            <apiCall apiId="customapis.Random" guid="2a8fd9f3-84f1-4104-a106-7e2779da71a0" name="Random" testItemId="22" title="Random: ⇒ RandomDate">
               <arguments>
                 <argument id="max">
                   <value class="value" valueClass="string">14</value>
@@ -112,7 +112,7 @@
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="19" title="Set Values: CloseDate">
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="b50bd9ad-3dfb-458a-80be-efa98bad8ceb" name="SetValues" testItemId="19" title="Set Values: CloseDate">
               <arguments>
                 <argument id="values">
                   <value class="valueList" mutable="Mutable">
@@ -144,7 +144,7 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="4" title="Set Values: Name">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="6049932c-c518-4dec-8b21-f7b950e67b01" name="SetValues" testItemId="4" title="Set Values: Name">
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -167,7 +167,7 @@
         </argument>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="6" title="Set Values: StagePicklist">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="158af218-1552-4974-849d-6403299651d6" name="SetValues" testItemId="6" title="Set Values: StagePicklist">
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -186,7 +186,7 @@
         </argument>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.string.Split" name="Split" testItemId="20" title="Split: {StagePicklist}=&gt;|=&gt;PicklistValues">
+    <apiCall apiId="com.provar.plugins.bundled.apis.string.Split" guid="d0dc2fde-57e1-4cb7-b737-d5bfda0305d7" name="Split" testItemId="20" title="Split: {StagePicklist}=&gt;|=&gt;PicklistValues">
       <arguments>
         <argument id="input">
           <value class="variable">
@@ -204,7 +204,7 @@
         </argument>
       </arguments>
     </apiCall>
-    <apiCall apiId="customapis.Random" name="Random" testItemId="21" title="Random: ⇒ PicklistIndex">
+    <apiCall apiId="customapis.Random" guid="f9820854-18fa-464e-b94b-f9bc692117b9" name="Random" testItemId="21" title="Random: ⇒ PicklistIndex">
       <arguments>
         <argument id="max">
           <value class="funcCall" id="Count">
@@ -226,7 +226,7 @@
         </argument>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="15" title="Create Object: Opportunity=&gt;OpportunityId">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="2eab552b-9d66-49d2-be8a-61ea19162971" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="15" title="Create Object: Opportunity=&gt;OpportunityId">
       <arguments>
         <argument id="objectType">
           <value class="value" valueClass="string">Opportunity</value>

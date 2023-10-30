@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="7">
+<testCase guid="c28ae0b0-c42a-4ff4-bf1d-7b455a0a3495" id="7">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: LDV (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="49b72f84-8e47-450b-9c4e-a202f8c03552" name="ApexConnect" testItemId="1" title="Salesforce Connect: LDV (Test)">
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -41,7 +41,7 @@
         <argument id="webBrowser"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="97" title="On MyPageObject page">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="63012b61-e584-462a-a8fd-a78c82156963" name="UiWithScreen" testItemId="97" title="On MyPageObject page">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -73,7 +73,7 @@
       <clauses>
         <clause name="substeps" testItemId="98">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="99" title="Click the Opportunities">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="9e3b130c-2aae-404e-b06e-cd7c1602a48f" name="UiDoAction" testItemId="99" title="Click the Opportunities">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:pageobject:field?pageId=pageobjects.MyPageObject&amp;field=opportunities"/>
@@ -135,7 +135,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="103" title="On SF Opportunity Home screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="37e984f1-e062-4cc1-b827-bb17e3a45b31" name="UiWithScreen" testItemId="103" title="On SF Opportunity Home screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -166,7 +166,7 @@
       <clauses>
         <clause name="substeps" testItemId="104">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="105" title="With Opportunity rows {OPPORTUNITY_NAME = &quot;ICVMASUABT&quot;}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" guid="7d4f7855-6923-4e10-8cd9-44e798959e04" name="UiWithRow" testItemId="105" title="With Opportunity rows {OPPORTUNITY_NAME = &quot;ICVMASUABT&quot;}">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">LDV</value>
@@ -202,7 +202,7 @@
               <clauses>
                 <clause name="substeps" testItemId="106">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="107" title="Click the Opportunity Name field">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="8966639a-03ff-4757-8ebe-860df8cc7bb5" name="UiDoAction" testItemId="107" title="Click the Opportunity Name field">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DName&amp;name=OPPORTUNITY_NAME"/>
@@ -270,7 +270,7 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="108" title="On SF arpediomatrix__matrixPreview component in Opportunity view">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="c9f97e53-c089-42dc-86f2-f2fb1c2b409d" name="UiWithScreen" testItemId="108" title="On SF arpediomatrix__matrixPreview component in Opportunity view">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -304,7 +304,7 @@
       <clauses>
         <clause name="substeps" testItemId="109">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="110" title="Click the Matrix Button button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="f7f8710d-7fc6-4ef5-8b50-e2591ba9744e" name="UiDoAction" testItemId="110" title="Click the Matrix Button button">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=matrixButton"/>
@@ -367,7 +367,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="111" title="On MyPageObject page">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="0bacfdb6-441c-4188-a33e-f33d496b7f56" name="UiWithScreen" testItemId="111" title="On MyPageObject page">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -399,7 +399,7 @@
       <clauses>
         <clause name="substeps" testItemId="112">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="113" title="With thisTimepleaseWork row">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" guid="19dbf1fe-0e9e-421e-b728-bd3a07bf4a05" name="UiWithRow" testItemId="113" title="With thisTimepleaseWork row">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">LDV</value>
@@ -428,7 +428,7 @@
               <clauses>
                 <clause name="substeps" testItemId="114">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="115" title="Click the Add Stakeholder">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="5afa7110-ec42-4fb3-b8de-d649441679ae" name="UiDoAction" testItemId="115" title="Click the Add Stakeholder">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:pageobject:field?pageId=pageobjects.MyPageObject&amp;field=addStakeholder"/>
@@ -502,7 +502,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="116" title="On SF matrix Aura component">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="c832da21-34a6-4701-839c-f78863fe7d64" name="UiWithScreen" testItemId="116" title="On SF matrix Aura component">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -533,7 +533,7 @@
       <clauses>
         <clause name="substeps" testItemId="117">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="118" title="Set the Search field to claire">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="5b21bd36-4479-44e0-90c2-3a2c4e75090f" name="UiDoAction" testItemId="118" title="Set the Search field to claire">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=search"/>
@@ -588,7 +588,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="119" title="Set the Stakeholder Type field to Technical Buyer">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="44295851-3c38-4b6d-99e7-2a4a908c1590" name="UiDoAction" testItemId="119" title="Set the Stakeholder Type field to Technical Buyer">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=stakeholderType"/>
@@ -651,7 +651,7 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Given" name="Given" testItemId="11" title="Given: Creating a new opportunity ">
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Given" guid="faec5d1d-d669-4438-b0b8-a1d5efa9c020" name="Given" testItemId="11" title="Given: Creating a new opportunity ">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Creating a new opportunity </value>
@@ -663,7 +663,7 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.When" name="When" testItemId="25" title="When: Opening Opportunity">
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.When" guid="3f1a4634-ec06-4087-95f6-660053f4d961" name="When" testItemId="25" title="When: Opening Opportunity">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Opening Opportunity</value>
@@ -675,7 +675,7 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="120" title="On SF matrix Aura component">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="d1795e24-fac9-4e69-9ffd-7d6d80c5a25c" name="UiWithScreen" testItemId="120" title="On SF matrix Aura component">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">LDV</value>
@@ -706,7 +706,7 @@
       <clauses>
         <clause name="substeps" testItemId="121">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="122" title="Click the Add button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="97a34b6c-c7be-4d0a-bc9b-2107cfa86cf9" name="UiDoAction" testItemId="122" title="Click the Add button">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=add"/>
