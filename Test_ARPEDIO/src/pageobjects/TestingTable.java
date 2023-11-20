@@ -149,6 +149,9 @@ public class TestingTable {
 	return s;
 	
 	}
+	@ButtonType()
+	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//button[normalize-space(.)='Get help']")
+	public WebElement getHelp;
 		
 		
 	}

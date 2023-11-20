@@ -930,7 +930,7 @@
       <clauses>
         <clause name="substeps" testItemId="176">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="05d2612c-a842-4755-bf25-ed3389fccdb9" name="UiDoAction" testItemId="177" title="Click the Convert Button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="05d2612c-a842-4755-bf25-ed3389fccdb9" name="UiDoAction" testItemId="177" title="Click the convertButton">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:pageobject:field?pageId=pageobjects.TestingTable&amp;field=convertButton"/>
@@ -954,7 +954,7 @@
                   <value class="uiWait" uri="default"/>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Convert Button</value>
+                  <value class="value" valueClass="string">Click the convertButton</value>
                 </argument>
                 <argument id="autoRetry"/>
                 <argument id="ieClickMethod">
@@ -991,6 +991,31 @@
           </type>
         </apiParam>
       </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Then" guid="8a0bb719-d8b0-4cb5-91cf-7f2ad1712327" name="Then" testItemId="179" title="Then: Clean up ">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Clean up </value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="180">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexDeleteObject" guid="f22ffa03-f92a-4982-9b17-2f0756365c55" name="ApexDeleteObject" testItemId="181" title="Delete Object: {OpportunityId}">
+              <arguments>
+                <argument id="objectId">
+                  <value class="variable">
+                    <path element="OpportunityId"/>
+                  </value>
+                </argument>
+                <argument id="apexConnectionName">
+                  <value class="value" valueClass="string">LDV</value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
     </apiCall>
   </steps>
   <tags/>

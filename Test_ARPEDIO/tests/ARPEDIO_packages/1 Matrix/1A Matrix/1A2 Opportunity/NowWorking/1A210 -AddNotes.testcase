@@ -414,10 +414,10 @@
                                         </apiParam>
                                       </generatedParameters>
                                     </apiCall>
-                                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="9f915a87-8b7f-48a9-9319-2186062fec38" name="UiDoAction" testItemId="175" title="Set the Text Area to not written manually">
+                                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="9f915a87-8b7f-48a9-9319-2186062fec38" name="UiDoAction" testItemId="175" title="Set the Text_for_ Notes to not written manually">
                                       <arguments>
                                         <argument id="locator">
-                                          <value class="uiLocator" uri="ui:pageobject:field?pageId=pageobjects.TestingTable&amp;field=TextArea"/>
+                                          <value class="uiLocator" uri="ui:pageobject:field?pageId=pageobjects.TestingTable&amp;field=Text_for_Notes"/>
                                         </argument>
                                         <argument id="interaction">
                                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
@@ -444,7 +444,7 @@
                                           <value class="uiWait" uri="default"/>
                                         </argument>
                                         <argument id="interactionDescription">
-                                          <value class="value" valueClass="string">Set the Text Area to not written manually</value>
+                                          <value class="value" valueClass="string">Set the Text_for_ Notes to not written manually</value>
                                         </argument>
                                         <argument id="autoRetry"/>
                                       </arguments>

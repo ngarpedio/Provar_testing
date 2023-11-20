@@ -395,6 +395,14 @@
                           </steps>
                         </clause>
                       </clauses>
+                      <generatedParameters>
+                        <apiParam group="options" name="autoRetry" title="Auto Retry">
+                          <summary>Whether to wait for the rows to be visible.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
                     </apiCall>
                   </steps>
                 </clause>

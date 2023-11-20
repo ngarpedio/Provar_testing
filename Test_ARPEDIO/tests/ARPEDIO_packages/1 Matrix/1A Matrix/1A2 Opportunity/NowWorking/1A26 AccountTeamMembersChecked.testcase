@@ -316,188 +316,171 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Then" name="Then" testItemId="95" title="Then: AddAccountTeamMember by search">
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Then" name="Then" testItemId="95" title="Then: Check value of Team members row">
       <arguments>
         <argument id="description">
-          <value class="value" valueClass="string">AddAccountTeamMember by search</value>
+          <value class="value" valueClass="string">Check value of Team members row</value>
         </argument>
       </arguments>
       <clauses>
-        <clause name="hidden" testItemId="96"/>
-      </clauses>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="97" title="On TestingTable page">
-      <arguments>
-        <argument id="uiConnectionName">
-          <value class="value" valueClass="string">LDV</value>
-        </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.TestingTable"/>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On TestingTable page</value>
-        </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">IfNeccessary</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="captureAfter">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="uiTargetUrl"/>
-      </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="98">
+        <clause name="hidden" testItemId="96">
           <steps>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="107" title="Set Values: Member2">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="76e1aeef-f7cc-4aaa-8b72-b277d95149f0" name="UiWithScreen" testItemId="97" title="On TestingTable page">
               <arguments>
-                <argument id="values">
-                  <value class="valueList" mutable="Mutable">
-                    <namedValues mutable="Mutable">
-                      <namedValue name="valuePath">
-                        <value class="value" valueClass="string">Member1</value>
-                      </namedValue>
-                      <namedValue name="value">
-                        <value class="value" valueClass="string">BIRAJPROVAR PROVAR</value>
-                      </namedValue>
-                      <namedValue name="valueScope">
-                        <value class="value" valueClass="string">Test</value>
-                      </namedValue>
-                    </namedValues>
-                    <namedValues mutable="Mutable">
-                      <namedValue name="valuePath">
-                        <value class="value" valueClass="string">Member2</value>
-                      </namedValue>
-                      <namedValue name="value">
-                        <value class="value" valueClass="string">FDDJDF</value>
-                      </namedValue>
-                      <namedValue name="valueScope">
-                        <value class="value" valueClass="string">Test</value>
-                      </namedValue>
-                    </namedValues>
-                  </value>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">LDV</value>
                 </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="99" title="Call the getMembers method">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:method?pageId=pageobjects.TestingTable&amp;operation=getMembers"/>
+                <argument id="target">
+                  <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.TestingTable"/>
                 </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On TestingTable page</value>
                 </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Call the getMembers method</value>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">IfNeccessary</value>
                 </argument>
-                <argument id="beforeWait"/>
-                <argument id="afterWait"/>
-                <argument id="autoRetry"/>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
                 <argument id="captureBefore">
                   <value class="value" valueClass="string">false</value>
                 </argument>
                 <argument id="captureAfter">
                   <value class="value" valueClass="string">false</value>
                 </argument>
-                <argument id="param_resultName">
-                  <value class="value" valueClass="string">ListMembers</value>
-                </argument>
-                <argument id="param_resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="param_resultName" seq="1001" title="Result Name">
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="param_resultScope" seq="1002" title="Result Scope">
-                  <defaultValue>Test</defaultValue>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="boundedValues">Global:Test Run|Folder:Test Folder|Test:Test Case|GroupStep:Group Step|Local:Test Step</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="100" title="Set Values: Size">
-              <arguments>
-                <argument id="values">
-                  <value class="valueList" mutable="Mutable">
-                    <namedValues mutable="Mutable">
-                      <namedValue name="valuePath">
-                        <value class="value" valueClass="string">Size</value>
-                      </namedValue>
-                      <namedValue name="value">
-                        <value class="funcCall" id="Count">
-                          <argument id="value">
-                            <value class="variable">
-                              <path element="ListMembers"/>
-                            </value>
-                          </argument>
-                        </value>
-                      </namedValue>
-                      <namedValue name="valueScope">
-                        <value class="value" valueClass="string">Test</value>
-                      </namedValue>
-                    </namedValues>
-                  </value>
-                </argument>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.ForEach" name="ForEach" testItemId="101" title="For Each: {ListMembers}=&gt;Member">
-              <arguments>
-                <argument id="list">
-                  <value class="variable">
-                    <path element="ListMembers"/>
-                  </value>
-                </argument>
-                <argument id="fromItem">
-                  <value class="value" valueClass="decimal">1</value>
-                </argument>
-                <argument id="valueName">
-                  <value class="value" valueClass="string">Member</value>
-                </argument>
-                <argument id="continueOnFailure"/>
+                <argument id="uiTargetUrl"/>
               </arguments>
               <clauses>
-                <clause name="substeps" testItemId="102">
+                <clause name="substeps" testItemId="98">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="103" title="If: {Member1 = Member}">
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="98c9ace4-d1f3-4b0f-abf5-e3c4a3a6416a" name="SetValues" testItemId="107" title="Set Values: Member2">
                       <arguments>
-                        <argument id="condition">
-                          <value class="eq">
-                            <lhs class="variable">
-                              <path element="Member1"/>
-                            </lhs>
-                            <rhs class="variable">
-                              <path element="Member"/>
-                            </rhs>
+                        <argument id="values">
+                          <value class="valueList" mutable="Mutable">
+                            <namedValues mutable="Mutable">
+                              <namedValue name="valuePath">
+                                <value class="value" valueClass="string">Member1</value>
+                              </namedValue>
+                              <namedValue name="value">
+                                <value class="value" valueClass="string">BIRAJPROVAR PROVAR</value>
+                              </namedValue>
+                              <namedValue name="valueScope">
+                                <value class="value" valueClass="string">Test</value>
+                              </namedValue>
+                            </namedValues>
+                            <namedValues mutable="Mutable">
+                              <namedValue name="valuePath">
+                                <value class="value" valueClass="string">Member2</value>
+                              </namedValue>
+                              <namedValue name="value">
+                                <value class="value" valueClass="string">FDDJDF</value>
+                              </namedValue>
+                              <namedValue name="valueScope">
+                                <value class="value" valueClass="string">Test</value>
+                              </namedValue>
+                            </namedValues>
                           </value>
                         </argument>
                       </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="e0a08516-b502-4b27-8f66-61b4f4919740" name="UiDoAction" testItemId="99" title="Call the getMembers method">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:pageobject:method?pageId=pageobjects.TestingTable&amp;operation=getMembers"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Call the getMembers method</value>
+                        </argument>
+                        <argument id="beforeWait"/>
+                        <argument id="afterWait"/>
+                        <argument id="autoRetry"/>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="string">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="string">false</value>
+                        </argument>
+                        <argument id="param_resultName">
+                          <value class="value" valueClass="string">ListMembers</value>
+                        </argument>
+                        <argument id="param_resultScope">
+                          <value class="value" valueClass="string">Test</value>
+                        </argument>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="param_resultName" seq="1001" title="Result Name">
+                          <type>
+                            <textType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="param_resultScope" seq="1002" title="Result Scope">
+                          <defaultValue>Test</defaultValue>
+                          <type>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="boundedValues">Global:Test Run|Folder:Test Folder|Test:Test Case|GroupStep:Group Step|Local:Test Step</valueConstraint>
+                              </constraints>
+                            </choiceType>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="652567e4-9ea0-4d87-9af8-4245248cdd6e" name="SetValues" testItemId="100" title="Set Values: Size">
+                      <arguments>
+                        <argument id="values">
+                          <value class="valueList" mutable="Mutable">
+                            <namedValues mutable="Mutable">
+                              <namedValue name="valuePath">
+                                <value class="value" valueClass="string">Size</value>
+                              </namedValue>
+                              <namedValue name="value">
+                                <value class="funcCall" id="Count">
+                                  <argument id="value">
+                                    <value class="variable">
+                                      <path element="ListMembers"/>
+                                    </value>
+                                  </argument>
+                                </value>
+                              </namedValue>
+                              <namedValue name="valueScope">
+                                <value class="value" valueClass="string">Test</value>
+                              </namedValue>
+                            </namedValues>
+                          </value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.ForEach" guid="18998f63-0760-482e-a78a-31afdc7a9024" name="ForEach" testItemId="101" title="For Each: {ListMembers}=&gt;Member">
+                      <arguments>
+                        <argument id="list">
+                          <value class="variable">
+                            <path element="ListMembers"/>
+                          </value>
+                        </argument>
+                        <argument id="fromItem">
+                          <value class="value" valueClass="decimal">1</value>
+                        </argument>
+                        <argument id="valueName">
+                          <value class="value" valueClass="string">Member</value>
+                        </argument>
+                        <argument id="continueOnFailure"/>
+                      </arguments>
                       <clauses>
-                        <clause name="then" testItemId="104">
+                        <clause name="substeps" testItemId="102">
                           <steps>
-                            <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="115" title="If: {Member2 = Member}">
+                            <apiCall apiId="com.provar.plugins.bundled.apis.If" guid="26bd1c24-3e4b-4603-a3ce-4012e3aa1689" name="If" testItemId="103" title="If: {Member1 = Member}">
                               <arguments>
                                 <argument id="condition">
                                   <value class="eq">
                                     <lhs class="variable">
-                                      <path element="Member2"/>
+                                      <path element="Member1"/>
                                     </lhs>
                                     <rhs class="variable">
                                       <path element="Member"/>
@@ -506,28 +489,73 @@
                                 </argument>
                               </arguments>
                               <clauses>
-                                <clause name="then" testItemId="116"/>
+                                <clause name="then" testItemId="104">
+                                  <steps>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.If" guid="3d39575d-b561-4fdd-83ce-f9576694ccc7" name="If" testItemId="115" title="If: {Member2 = Member}">
+                                      <arguments>
+                                        <argument id="condition">
+                                          <value class="eq">
+                                            <lhs class="variable">
+                                              <path element="Member2"/>
+                                            </lhs>
+                                            <rhs class="variable">
+                                              <path element="Member"/>
+                                            </rhs>
+                                          </value>
+                                        </argument>
+                                      </arguments>
+                                      <clauses>
+                                        <clause name="then" testItemId="116"/>
+                                      </clauses>
+                                    </apiCall>
+                                  </steps>
+                                  <tags/>
+                                </clause>
                               </clauses>
                             </apiCall>
                           </steps>
-                          <tags/>
                         </clause>
                       </clauses>
                     </apiCall>
                   </steps>
                 </clause>
               </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="uiTargetUrl" title="Web Page">
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
             </apiCall>
           </steps>
         </clause>
       </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="uiTargetUrl" title="Web Page">
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Then" guid="e275e823-37e6-49ce-8a9c-8d2d1f18493f" name="Then" testItemId="140" title="Then: Clean up ">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Clean up </value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="141">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexDeleteObject" guid="b08ecbc8-bafc-4d0a-9c86-9702bfc75f17" name="ApexDeleteObject" testItemId="142" title="Delete Object: {OpportunityId}">
+              <arguments>
+                <argument id="objectId">
+                  <value class="variable">
+                    <path element="OpportunityId"/>
+                  </value>
+                </argument>
+                <argument id="apexConnectionName">
+                  <value class="value" valueClass="string">LDV</value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
     </apiCall>
   </steps>
 </testCase>

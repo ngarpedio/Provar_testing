@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="10da2065-d71f-4dc0-bc96-ca82a788ce18" id="4">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="2cd880bf-ed68-4267-adf5-afbaf78704c8" name="ApexConnect" testItemId="1" title="Salesforce Connect: LDV (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">LDV</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">LDV</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Given" guid="b77eff90-8299-473f-8b7d-e538bb3007fa" name="Given" testItemId="11" title="Given: Creating a new opportunity ">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Creating a new opportunity </value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="3">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="fbb32b47-a238-442a-beb4-b9880dd7b801" isTitleUpdated="true" name="SetValues" testItemId="13" title="Object and User Data">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">OpportunityName</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="funcCall" id="UniqueId">
+                          <argument id="length">
+                            <value class="value" valueClass="decimal">10</value>
+                          </argument>
+                          <argument id="format">
+                            <value class="variable">
+                              <path element="ALPHA"/>
+                            </value>
+                          </argument>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="f67ac695-4dc2-49fe-85aa-68bc172f6edd" name="SetValues" testItemId="90" title="Set Values: Days">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">Days</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="funcCall" id="UniqueId">
+                          <argument id="length">
+                            <value class="value" valueClass="decimal">2</value>
+                          </argument>
+                          <argument id="format">
+                            <value class="variable">
+                              <path element="NUMERIC"/>
+                            </value>
+                          </argument>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="aad41247-80ce-4ae1-8cea-2f102dd37978" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="89" title="Create Object: Opportunity=&gt;OpportunityId">
+              <arguments>
+                <argument id="objectType">
+                  <value class="value" valueClass="string">Opportunity</value>
+                </argument>
+                <argument id="resultIdName">
+                  <value class="value" valueClass="string">OpportunityId</value>
+                </argument>
+                <argument id="apexConnectionName">
+                  <value class="value" valueClass="string">LDV</value>
+                </argument>
+                <argument id="assignmentRuleId"/>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="Name">
+                  <value class="variable">
+                    <path element="OpportunityName"/>
+                  </value>
+                </argument>
+                <argument id="StageName">
+                  <value class="value" valueClass="string">Needs Analysis</value>
+                </argument>
+                <argument id="CloseDate">
+                  <value class="funcCall" id="DateAdd">
+                    <argument id="date">
+                      <value class="variable">
+                        <path element="TODAY"/>
+                      </value>
+                    </argument>
+                    <argument id="amount">
+                      <value class="variable">
+                        <path element="Days"/>
+                      </value>
+                    </argument>
+                  </value>
+                </argument>
+                <argument id="Type">
+                  <value class="value" valueClass="string">Existing Business</value>
+                </argument>
+              </arguments>
+              <parameterGeneratorProperties>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">UAT</propertyValue>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Opportunity</propertyValue>
+              </parameterGeneratorProperties>
+              <generatedParameters>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Name" name="Name" title="Name"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=StageName" name="StageName" title="StageName"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=CloseDate" name="CloseDate" title="CloseDate"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Type" name="Type" title="Type"/>
+              </generatedParameters>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.When" guid="4eedd4b7-530d-47ec-99b0-c9b6d29a9431" name="When" testItemId="25" title="When: Opening Opportunity">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Opening Opportunity</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="26">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="d855cf37-3d6a-47a9-a7bf-dfc3da0d1296" name="UiWithScreen" testItemId="27" title="On SF Opportunity View screen">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">LDV</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="sf:ui:target?action=View&amp;object=Opportunity"/>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On SF Opportunity View screen</value>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">IfNeccessary</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Maximize</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="sfUiTargetObjectId">
+                  <value class="variable">
+                    <path element="OpportunityId"/>
+                  </value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="28">
+                  <steps/>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
+                  <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="2a0e9bc1-a1a9-440b-841e-10b74a86deb9" name="UiWithScreen" testItemId="29" title="On SF arpediomatrix__matrixPreview Lightning Web component">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">LDV</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="sf:ui:target?lightningWebComponent=arpediomatrix__matrixPreview&amp;pageObject=pageobjects.arpediomatrix__matrixPreview"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Dont</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On SF arpediomatrix__matrixPreview Lightning Web component</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Maximize</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="sfUiTargetObjectId">
+                  <value class="variable">
+                    <path element="OpportunityId"/>
+                  </value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="30">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="ad17d656-d3c1-405d-be9d-f9e7b0a096fd" name="UiDoAction" testItemId="31" title="Click the Matrix Button button">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=matrixButton"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="string">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="string">false</value>
+                        </argument>
+                        <argument id="beforeWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="afterWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Matrix Button button</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                        <argument id="ieClickMethod">
+                          <value class="value" valueClass="string">Default</value>
+                        </argument>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
+                          <summary>How the click should be executed for Internet Explorer.</summary>
+                          <type>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
+                                <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
+                              </constraints>
+                            </choiceType>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters/>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Then" guid="98fe4e8f-c06d-4fc6-9be2-caaf433e844e" name="Then" testItemId="95" title="Then: AddAccountTeamMember by search">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">AddAccountTeamMember by search</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="96">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="6f1a39f8-8c9c-462f-8eb7-7c3857c12101" name="UiWithScreen" testItemId="103" title="On TestingTable page">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">LDV</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.TestingTable"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Always</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On TestingTable page</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="uiTargetUrl"/>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="104">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" guid="71f25f35-c6ba-4bf4-88af-6942b87b1798" name="UiWithRow" testItemId="105" title="With demoTable row">
+                      <arguments>
+                        <argument id="uiConnectionName">
+                          <value class="value" valueClass="string">LDV</value>
+                        </argument>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:pageobject:row?field=demoTable"/>
+                        </argument>
+                        <argument id="uiRowLocator">
+                          <value class="value" valueClass="decimal">1</value>
+                        </argument>
+                        <argument id="locatorDescription">
+                          <value class="value" valueClass="string">With demoTable row</value>
+                        </argument>
+                        <argument id="failIfNotFound">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
+                        <argument id="debugRowLocator"/>
+                        <argument id="resultName">
+                          <value class="value" valueClass="string">Row</value>
+                        </argument>
+                        <argument id="resultScope">
+                          <value class="value" valueClass="string">Local</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                      </arguments>
+                      <clauses>
+                        <clause name="substeps" testItemId="106">
+                          <steps>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="d0d13cdc-53f0-455b-b86e-fdfc89b60b49" name="UiDoAction" testItemId="107" title="Click the Add Team Members">
+                              <arguments>
+                                <argument id="locator">
+                                  <value class="uiLocator" uri="ui:pageobject:field?pageId=pageobjects.TestingTable&amp;field=addTeamMembers"/>
+                                </argument>
+                                <argument id="interaction">
+                                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                                </argument>
+                                <argument id="hover">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="captureBefore">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="beforeWait">
+                                  <value class="uiWait" uri="default"/>
+                                </argument>
+                                <argument id="afterWait">
+                                  <value class="uiWait" uri="default"/>
+                                </argument>
+                                <argument id="interactionDescription">
+                                  <value class="value" valueClass="string">Click the Add Team Members</value>
+                                </argument>
+                                <argument id="autoRetry"/>
+                                <argument id="ieClickMethod">
+                                  <value class="value" valueClass="string">Default</value>
+                                </argument>
+                              </arguments>
+                              <generatedParameters>
+                                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
+                                  <summary>How the click should be executed for Internet Explorer.</summary>
+                                  <type>
+                                    <choiceType>
+                                      <constraints>
+                                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
+                                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
+                                      </constraints>
+                                    </choiceType>
+                                  </type>
+                                </apiParam>
+                              </generatedParameters>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="a4a7c956-f97c-421e-9d28-95775c7cd64d" name="UiDoAction" testItemId="108" title="Call the addteamNon method">
+                              <arguments>
+                                <argument id="locator">
+                                  <value class="uiLocator" uri="ui:pageobject:method?operation=addteamNon&amp;pageId=pageobjects.TestingTable"/>
+                                </argument>
+                                <argument id="interaction">
+                                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
+                                </argument>
+                                <argument id="interactionDescription">
+                                  <value class="value" valueClass="string">Call the addteamNon method</value>
+                                </argument>
+                                <argument id="beforeWait"/>
+                                <argument id="afterWait"/>
+                                <argument id="autoRetry"/>
+                                <argument id="captureBefore">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="param_member">
+                                  <value class="value" valueClass="string">Carlos</value>
+                                </argument>
+                              </arguments>
+                              <generatedParameters>
+                                <apiParam group="value" name="param_member" title="Member">
+                                  <type>
+                                    <textType/>
+                                  </type>
+                                </apiParam>
+                              </generatedParameters>
+                            </apiCall>
+                          </steps>
+                        </clause>
+                      </clauses>
+                      <generatedParameters>
+                        <apiParam group="options" name="autoRetry" title="Auto Retry">
+                          <summary>Whether to wait for the rows to be visible.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="uiTargetUrl" title="Web Page">
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="c83ffdf0-0437-477b-9012-5804219a6a10" name="UiWithScreen" testItemId="109" title="On SF matrix Aura component">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">LDV</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="sf:ui:target?pageObject=pageobjects.matrix&amp;auraComponent=matrix"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Dont</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On SF matrix Aura component</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="110">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="576ab9e1-1791-4198-8ffb-ebccb72837f4" name="UiDoAction" testItemId="111" title="Click the Add button">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=add"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="string">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="string">false</value>
+                        </argument>
+                        <argument id="beforeWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="afterWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Add button</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                        <argument id="ieClickMethod">
+                          <value class="value" valueClass="string">Default</value>
+                        </argument>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
+                          <summary>How the click should be executed for Internet Explorer.</summary>
+                          <type>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
+                                <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
+                              </constraints>
+                            </choiceType>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Then" guid="fc627889-6080-4b1c-971a-8ff0273be7fa" name="Then" testItemId="130" title="Then: Assert Team Member is ghost user\n">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Assert Team Member is ghost user\n</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="131">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="4ae0f5db-da47-45ae-ac9f-848f405c6eb6" name="UiWithScreen" testItemId="112" title="On TestingTable page">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">LDV</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.TestingTable"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Dont</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On TestingTable page</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="uiTargetUrl"/>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="113">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" guid="eeea80e1-3cf5-4a33-9e2f-71879628a0e1" name="UiWithRow" testItemId="114" title="With demoTable row">
+                      <arguments>
+                        <argument id="uiConnectionName">
+                          <value class="value" valueClass="string">LDV</value>
+                        </argument>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:pageobject:row?field=demoTable"/>
+                        </argument>
+                        <argument id="uiRowLocator">
+                          <value class="value" valueClass="decimal">1</value>
+                        </argument>
+                        <argument id="locatorDescription">
+                          <value class="value" valueClass="string">With demoTable row</value>
+                        </argument>
+                        <argument id="failIfNotFound">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
+                        <argument id="debugRowLocator"/>
+                        <argument id="resultName">
+                          <value class="value" valueClass="string">Row</value>
+                        </argument>
+                        <argument id="resultScope">
+                          <value class="value" valueClass="string">Local</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                      </arguments>
+                      <clauses>
+                        <clause name="substeps" testItemId="115">
+                          <steps>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="e27791e7-d77a-40e2-bfa4-ba298732ce0b" name="UiDoAction" testItemId="116" title="Click the Getteammember">
+                              <arguments>
+                                <argument id="locator">
+                                  <value class="uiLocator" uri="ui:pageobject:field?pageId=pageobjects.TestingTable&amp;field=getteammember"/>
+                                </argument>
+                                <argument id="interaction">
+                                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                                </argument>
+                                <argument id="hover">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="captureBefore">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="beforeWait">
+                                  <value class="uiWait" uri="default"/>
+                                </argument>
+                                <argument id="afterWait">
+                                  <value class="uiWait" uri="default"/>
+                                </argument>
+                                <argument id="interactionDescription">
+                                  <value class="value" valueClass="string">Click the Getteammember</value>
+                                </argument>
+                                <argument id="autoRetry"/>
+                                <argument id="ieClickMethod">
+                                  <value class="value" valueClass="string">Default</value>
+                                </argument>
+                              </arguments>
+                              <generatedParameters>
+                                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
+                                  <summary>How the click should be executed for Internet Explorer.</summary>
+                                  <type>
+                                    <choiceType>
+                                      <constraints>
+                                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
+                                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
+                                      </constraints>
+                                    </choiceType>
+                                  </type>
+                                </apiParam>
+                              </generatedParameters>
+                            </apiCall>
+                          </steps>
+                        </clause>
+                      </clauses>
+                      <generatedParameters>
+                        <apiParam group="options" name="autoRetry" title="Auto Retry">
+                          <summary>Whether to wait for the rows to be visible.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="uiTargetUrl" title="Web Page">
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="f7638ad4-b41f-4ea1-bf93-7b304eec073e" name="UiWithScreen" testItemId="118" title="On SF matrix Aura component">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">LDV</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="sf:ui:target?auraComponent=matrix&amp;pageObject=pageobjects.matrix"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Dont</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On SF matrix Aura component</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="119">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" guid="87675d30-f648-40c3-a5c4-489f51fa8909" name="UiAssert" testItemId="120" title="UI Assert">
+                      <arguments>
+                        <argument id="resultName">
+                          <value class="value" valueClass="string">Values</value>
+                        </argument>
+                        <argument id="resultScope">
+                          <value class="value" valueClass="string">Test</value>
+                        </argument>
+                        <argument id="fieldAssertions">
+                          <value class="valueList" mutable="Mutable">
+                            <uiFieldAssertion resultName="ghostUserText">
+                              <fieldLocator uri="ui:locator?name=ghostUserText"/>
+                              <attributeAssertions>
+                                <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo" normalize="true">
+                                  <value class="value" valueClass="string">This is not a Salesforce user.</value>
+                                </uiAttributeAssertion>
+                              </attributeAssertions>
+                            </uiFieldAssertion>
+                          </value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="string">false</value>
+                        </argument>
+                        <argument id="columnAssertions">
+                          <value class="valueList" mutable="Mutable"/>
+                        </argument>
+                        <argument id="pageAssertions">
+                          <value class="valueList" mutable="Mutable"/>
+                        </argument>
+                        <argument id="beforeWait"/>
+                        <argument id="autoRetry"/>
+                      </arguments>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.bdd.Then" guid="a995b8bc-35ef-4f52-b32b-1586986e6295" name="Then" testItemId="141" title="Then: Clean up ">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Clean up </value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="142">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexDeleteObject" guid="e44e2c83-66f1-4fd2-b15f-dd19d6ae7fa8" name="ApexDeleteObject" testItemId="143" title="Delete Object: {OpportunityId}">
+              <arguments>
+                <argument id="objectId">
+                  <value class="variable">
+                    <path element="OpportunityId"/>
+                  </value>
+                </argument>
+                <argument id="apexConnectionName">
+                  <value class="value" valueClass="string">LDV</value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+</testCase>
