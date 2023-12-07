@@ -89,6 +89,15 @@ public class TestingTable {
 		@TextType()
 		@JavascriptBy(jspath = "return document.querySelector('arpediomatrix-matrix').shadowRoot.querySelector('c-matrix-table').shadowRoot.querySelector('lightning-helptext').shadowRoot.querySelector('lightning-button-icon').shadowRoot.querySelector('button')")
 		public WebElement getteammember;
+		@TextType()
+		@FindBy(xpath = "//th[5]")
+		public WebElement Platform_User_on_Team_Member_Row;
+		@TextType()
+		@FindBy(xpath = "//th[4]")
+		public WebElement Team_Member_just_added_Row;
+		@TextType()
+		@JavascriptBy(jspath = "return document.querySelector('arpediomatrix-matrix').shadowRoot.querySelector('c-matrix-table').shadowRoot.querySelectorAll('lightning-button-icon')[1].shadowRoot.querySelector('button')")
+		public WebElement addStakeholder;
 	}
 	@PageTable(firstRowContainsHeaders = false, row = DemoTable.class)
 	@FindBy(xpath = "//table//tr")

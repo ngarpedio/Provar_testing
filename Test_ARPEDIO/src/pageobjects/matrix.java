@@ -66,6 +66,10 @@ public class matrix {
 		@ButtonType()
 		@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//button[normalize-space(.)='Convert']")
 		public WebElement convertButton;
+
+		@ButtonType()
+		@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//button[normalize-space(.)='Remove']")
+		public WebElement AreYouSureRemove;
 	
 }
 
